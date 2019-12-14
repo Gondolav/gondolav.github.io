@@ -23,3 +23,15 @@ header:
       fr-LU   : *FR
       # @end locale config
     url: /about.html
+
+en:
+  - title:      Table of contents
+    children:
+        - title:  The setting
+          url:    /#the-setting
+        - title:  Inspections and food establishments
+          url:    /#inspections-and-food-establishments
+        - title:  The analysis
+          url:    /#the-analysis     
+        - title:  What have we learned?
+          url:    /#what-have-we-learned
