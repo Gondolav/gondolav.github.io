@@ -123,3 +123,5 @@ As a general conclusion for this analysis, we can affirm that facilities which f
 While analyzing the inspections' results, we discovered that **severe inequalities**, linked to the population's wealth, ethnicity and education, exist even in the context of food safety; the safest restaurants are, indeed, gathered mostly in prosperous neighbourhoods. As such, one possible way of reducing social inequalities in Chicago would surely be improving the quality of food establishments.
 
 NOT DONE YET, WAITING FOR THE DATA STORY TO BE COMPLETE
+
+- summary of each section? (including brief summary of the safest neighbourhoods?)
