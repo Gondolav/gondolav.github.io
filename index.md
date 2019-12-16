@@ -50,7 +50,7 @@ One of the features we could use to perform an analysis of these food inspection
 We built the following map, which colours each community area with a colour according to its `RISK 1 (HIGH)` rate.
 
 \* insert risk map \*
-{% include risk_map.html %}
+{% include maps/risk_map.html %}
 
 The areas with the most important `RISK 1 (HIGH)` rate are mostly located in the Central, Far North, Northwest and North sides of Chicago. This is rather surprising since these parts of the city are mostly populated with middle-class and well-off populations. On the other hand, the Southwest and South sides of Chicago tend to have a lower risk rate, i.e. in districts with a much lower median income.
 
@@ -72,7 +72,7 @@ Hence, a bad risk rate of a Chicago neighbourhood doesn't seem to be related to 
 Another very interesting feature present in those inspections is obviously the `Result` of the inspection. We decided to focus on the three main possible results: `PASS`, `PASS W/ CONDITIONS` and `FAIL`. Gathering the two first possibilities into a global pass, this provided us with a pass and a fail rates summing up to 1. We can now portray the community areas by their percentage of successful inspections and get the following map:
 
 \* insert result map \*
-{% include result_map.html %}
+{% include maps/result_map.html %}
 
 The central district `Loop` as well as the edge areas of the city share the highest rates when regarding the pass inspections. They are wealthy neighbourhoods, which could explain why a peculiar care seems to be taken in making food facilities safe. We clearly cannot say the same about the South Side of Chicago, which gathers the Community Areas with highest `FAIL` rates.
 
