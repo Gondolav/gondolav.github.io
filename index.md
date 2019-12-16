@@ -55,26 +55,10 @@ The areas with the most important `RISK 1 (HIGH)` rate are mostly located in the
 
 Let us now go deeper in our interpretation thanks to the [Chicago Metropolitan Agency for Planning website](https://www.cmap.illinois.gov/data/community-snapshots), as mentioned above. We first summarize some information about the five community areas with the lowest high risk rate.
 
-|community_area|population|ethnicity|education/higher(%)|education/high_school(%)|education/less(%)|income/median($)|income/less_50000(%),income/more_100000(%)|
-|---|---|---|---|---|---|---|---|---|
-|WEST GARFIELD PARK|17163|black 95%|11|62|27|23250|75|4|
-|WEST ENGLEWOOD|29929|black 91%|14|65|12|28000|76|7|
-|EAST GARFIELD PARK|19996|black 88%|22|57|22|13100|73|8|
-|ENGLEWOOD|25075|black 95%|12|60|26|19800|84|4|
-|BRIDGEPORT|33637|asian 33% white 33% hispanic 24%|35|43|20|45700|53|20|
-
 Obviously, `Englewood` and `West Englewood` as well as `East Garfield Park` and `West Garfield Park` are neighbour community areas. In general, these neighbourhoods present similar ethnicity, education level and income level. Moreover, all these 3 indicators have very low values overall: with the exception of `Bridgeport`, in these neighbourhoods 75% of the population earns less than 50'000$ a year and less than 20% of the inhabitants have a university degree. Here, `Bridgeport` looks more like an outlier with its different ethnicity and its median income, and its higher education level being as twice as high as the others.
 
 Consequently, from these results, a good risk rate seems very surprisingly to be linked to the (lack of) wealth and education of a community area.
 We now focus on five worst neighbourhoods according to their risk rate.
-
-|community_area|population|ethnicity|education/higher(%)|education/high_school(%)|education/less(%)|income/median($)|income/less_50000(%)|income/more_100000(%)|
-|---|---|---|---|---|---|---|---|---|
-|LINCOLN SQUARE|41715|white 64% hispanic 17% asian 11%|67|25|8|71700|36|35|
-|EAST SIDE|23737|hispanic 80%|17|52|31|43200|55|14|
-|NORWOOD PARK|37089|white 81%|46|46|8|74100|33|37|
-|ARMOUR SQUARE|13455|asian 73%|27|40|33|26500|68|15|
-|EDISON PARK|11605|white 83%|54|41|5|99200|27|50|
 
 It is quite hard to find common patterns to these five community areas. Geographically, four of them are located in the suburbs of Chicago, while `Armour Square` is a central neighbourhood. The ethnicity is also heterogeneous, except for the African-American population that appears to be minority. As for the education and income levels, they vary widely from one community area to the other, e.g. from a poor median income of 26'500 $ per year in `Armour Square` to a very high 99'200$ per year in `Edison Park`.
 
@@ -92,27 +76,11 @@ The central district `Loop` as well as the edge areas of the city share the high
 
 As for the risk analysis, we deepen our interpretation thanks to the [Chicago Metropolitan Agency for Planning website](https://www.cmap.illinois.gov/data/community-snapshots).
 
-|community_area|population|ethnicity|education/higher(%)|education/high_school(%)|education/less(%)|income/median($)|income/less_50000(%)|income/more_100000(%)|
-|---|---|---|---|---|---|---|---|---|
-|CLEARING|25891|hispanic 53% white 43%|26|59|15|62400|40|23|
-|O'HARE|12377|white 80%|45|44|11|49300|51|13|
-|ASHBURN|43792|black 50% hispanic 40%|30|55|15|66600|35|27|
-|MOUNT GREENWOOD|19277|white 85%|43|53|4|94700|23|46|
-|LOOP|35880|white 62% asian 17% black 11%|83|15|2|103300|24|52|
-
 These 5 Community Areas are mainly located in the suburbs of Chicago and have quite diverse populations in terms of ethnicity, education level and income level. Nevertheless, we can notice that at least 25% of their population has a university degree and that they all have a median income of 50'000$ per year or more, two high statistics. In particular, `Loop`, the central business district in the downtown area of the city and home to Chicago's commercial core, has a huge university degree rate (83%) and median income (100'000$ per year). On the other hand, almost a quarter of this community area's population earns less than 50'000$ per year, proof that there are important inequalities even within a single neighbourhood.
 
 Overall, given these results, we could hypothesize that high pass rates are related to prosperous neighbourhoods.
 
-|community_area|population|ethnicity|education/higher(%)|education/high_school(%)|education/less(%)|income/median($)|income/less_50000(%)|income/more_100000(%)|
-|---|---|---|---|---|---|---|---|---|
-|OAKLAND|6645|black 90 %|35|49|16|28300|70|11|
-|WOODLAWN|23268|black 83%|36|50|14|25100|71|10|
-|GRAND BOULEVARD|22313|black 92%|36|49|15|32000|64|14|
-|GRAND CROSSING|31766|black 96%|25|61|14|27000|70|7|
-|WASHINGTON PARK|11502|black 94%|23|59|18|25400|76|16|
-
-The first two things to notice about this dataframe are that the ethnicity of the five worst community areas in terms of pass rate is predominantly African-American and that these five neighbourhoods are very close to each other geographically. If the percentage of the population with a university degree is not that low, the median income on the other hand is very limited. On average, 70% of the population of these neighbourhoods makes less than 50'000$ per year.
+The first two things to notice about this table are that the ethnicity of the five worst community areas in terms of pass rate is predominantly African-American and that these five neighbourhoods are very close to each other geographically. If the percentage of the population with a university degree is not that low, the median income on the other hand is very limited. On average, 70% of the population of these neighbourhoods makes less than 50'000$ per year.
 
 The conclusion to draw here is rather clear: a low pass rate seems to be closely related to the (lack of) wealth and education of a Community Area. In particular, districts with an African-American population appear to be more struck by food safety issues.
 
