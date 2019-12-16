@@ -18,11 +18,11 @@ article_header:
 ---
 <!--more-->
 
-# The setting
+# The Setting
 
 **Chicago** is the third most populous and the second most visited city in the United States. It is an international hub for finance, culture, commerce, industry, education, technology, telecommunications and transportation. The Chicago area [has one of the highest gross domestic product (GDP) in the world](https://www.bea.gov/system/files/2018-09/gdp_metro0918_0.pdf) and the [most balanced economy in the U.S.](http://www.worldbusinesschicago.com/economy), due to its high level of diversification. Moreover, the *Windy City* ranks first globally in the [2018 Time Out City Life Index](https://www.timeout.com/chicago/news/chicago-named-the-worlds-best-city-for-having-it-all-012918), a quality of life survey, and seventh for the highest number of [ultra-high-net-worth residents](https://www.chicagobusiness.com/finance-banking/these-are-cities-most-ultra-rich-people): roughly 3,300 residents are worth more than $30 million. Nevertheless, Chicago is also a city of contradictions and inequalities: according to the 2008-2012 U.S. Census Bureau's American Community Survey, about 18.3% of families and 22.1% of the population lived below the poverty line.
 
-# Inspections and food establishments
+# Inspections and Food Establishments
 
 Chicago is home to 16,000 food establishments like restaurants, grocery stores, bakeries, wholesalers, lunchrooms, mobile food vendors and more. The city has many upscale dining establishments as well as many ethnic restaurant districts, including the Mexican American neighbourhoods, such as Pilsen along 18th street, and La Villita along 26th Street; the Puerto Rican enclave of Paseo Boricua in the Humboldt Park neighbourhood; Greektown, along South Halsted Street, immediately west of downtown; Little Italy, along Taylor Street; Chinatown in Armour Square; Polish Patches in West Town; Little Seoul in Albany Park around Lawrence Avenue; Little Vietnam near Broadway in Uptown; and the Desi area, along Devon Avenue in West Ridge.
 
@@ -35,7 +35,7 @@ CDPH inspects most food establishments twice a year, with other establishments d
 
 The inspections' results are available [online](http://webapps1.chicago.gov/healthinspection/inspection.jsp).
 
-# The analysis
+# The Analysis
 
 We analyzed food inspections' results to give an overview of the city's food safety over the last decade. The aim was to identify patterns at the social and geographical levels, focusing our efforts in pinpointing **where to eat safely in Chicago**. With our work, we hope to raise awareness about the Chicago's food safety landscape and instruct people on the quality of the establishments they regularly visit.
 
@@ -44,12 +44,13 @@ In this article, we first take a look at the different facilities' predispositio
 We use the [Chicago Metropolitan Agency for Planning website](https://www.cmap.illinois.gov/data/community-snapshots) to interpret in a deeper way our results, as they provide community snapshots that summarize demographics, housing, employment, transportation habits, retail sales, property values, and land use in all 77 Chicago community areas, which correspond to the "neighbourhoods" we are considering.
 We have built small tables with the different features we found interesting on the best and worse Community Areas according to the two main aspects we considered, namely the `RISK 1 (HIGH)` rate and the `PASS` rate.
 
-## Risk analysis per neighbourhood
+## Risk Analysis Per Neighbourhood
 
 One of the features we could use to perform an analysis of these food inspections is the `Risk` associated with each inspection. The risk is a measure that can take 3 different values: `RISK 1 (HIGH)`, `RISK 2 (MEDIUM)` and `RISK 3 (LOW)`. We chose to judge the neighbourhoods by their percentage of high risk food facilities as it appeared to be an accurate measure we could get from this feature. Indeed, such a test would probably tell us something about the safest places in Chicago food-wise.
 We built the following map, which colours each community area with a colour according to its `RISK 1 (HIGH)` rate.
 
 \* insert risk map \*
+{% include maps/risk_map.html %}
 
 The areas with the most important `RISK 1 (HIGH)` rate are mostly located in the Central, Far North, Northwest and North sides of Chicago. This is rather surprising since these parts of the city are mostly populated with middle-class and well-off populations. On the other hand, the Southwest and South sides of Chicago tend to have a lower risk rate, i.e. in districts with a much lower median income.
 
@@ -66,11 +67,12 @@ Hence, a bad risk rate of a Chicago neighbourhood doesn't seem to be related to 
 
 \* need to conclude \*
 
-## Result analysis per neighbourhood
+## Result Analysis Per Neighbourhood
 
 Another very interesting feature present in those inspections is obviously the `Result` of the inspection. We decided to focus on the three main possible results: `PASS`, `PASS W/ CONDITIONS` and `FAIL`. Gathering the two first possibilities into a global pass, this provided us with a pass and a fail rates summing up to 1. We can now portray the community areas by their percentage of successful inspections and get the following map:
 
 \* insert result map \*
+{% include maps/result_map.html %}
 
 The central district `Loop` as well as the edge areas of the city share the highest rates when regarding the pass inspections. They are wealthy neighbourhoods, which could explain why a peculiar care seems to be taken in making food facilities safe. We clearly cannot say the same about the South Side of Chicago, which gathers the Community Areas with highest `FAIL` rates.
 
@@ -86,7 +88,8 @@ The conclusion to draw here is rather clear: a low pass rate seems to be closely
 
 \* need to conclude \*
 
-## Evolution of the pass rate over time
+## Evolution of the Pass Rate Over Time
+
 
 \* insert result map over time \*
 
@@ -98,7 +101,7 @@ As a general conclusion for this analysis, we can affirm that facilities which f
 
 -> no access to education for poor populations and less and less job opportunities without a diploma
 
-# What have we learned?
+# What Have We Learned?
 
 While analyzing the inspections' results, we discovered that **severe inequalities**, linked to the population's wealth, ethnicity and education, exist even in the context of food safety; the safest restaurants are, indeed, gathered mostly in prosperous neighbourhoods. As such, one possible way of reducing social inequalities in Chicago would surely be improving the quality of food establishments.
 
