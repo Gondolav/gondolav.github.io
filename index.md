@@ -44,6 +44,24 @@ In this article, we first take a look at the different facilities' predispositio
 We use the [Chicago Metropolitan Agency for Planning website](https://www.cmap.illinois.gov/data/community-snapshots) to interpret in a deeper way our results, as they provide community snapshots that summarize demographics, housing, employment, transportation habits, retail sales, property values, and land use in all 77 Chicago community areas, which correspond to the "neighbourhoods" we are considering.
 We have built small dataframes with the different features we found interesting on the best and worse Community Areas according to the two main aspects we considered, namely the `RISK 1 (HIGH)` rate and the `PASS` rate.
 
+## Facility types and their predisposition to failure
+
+TODO
+
+## Fast-food restaurant chains
+
+Fast-foods restaurants are undeniably forming a huge sector of modern catering and are well-known to the average consumer. Conducting a study about the popular chains located in Chicago is a good way to reveal insights about the food quality in these establishments and find out how they compare to one another. We selected the chains that had the most restaurants in the city in order to have stable and accurate data. We chose these chains in particular as they are part of the ten largest fast-food restaurant chains in the world. We used a barplot for comparison, as it appeared to be the most adequate plot to visualize the differences between the results of each chain.
+
+We selected the restaurant chains that had the most restaurants in the city in order to have stable and accurate data (`Subway`, `McDonald's`, `KFC`, `Pizza Hut`...).
+
+The chain with the highest `Fail` rate is `Papa John's Pizza`, followed by `Harold's Chicken Shack` and `Flat Top Grill`, which has however a significantly lower number of facilities (31 `Harold's Chicken Shack` and 19 `Flat Top Grill` versus 102 `McDonald's`). `Starbucks` and `Taco Bell` distinguish themselves by being the two chains with the highest `Pass` rates, aroung 80%! As for `Freeshi`, `Wingstop` and `Domino's Pizza`, they have the highest `Pass with conditions` rate. Hence their low pass rate shows rather that some of the establishments could be a bit more careful than a truly dirty fast-food restaurant chain.
+
+Gathering these chains by the type of food they sell, we can notice that pizza restaurants have a higher tendency to fail inspections, whereas sandwich facilities appear to be quite successful in general.
+
+We may have to be careful with those results: the huge gap (302 `Subway`'s versus only 18 `Papa John's Pizza`'s) between the number of facilities could make the comparison biased. Indeed, we can see that the three chains with more than 100 restaurants in Chicago (namely `Subway`, `Dunkin Donuts` and `McDonald's`) all are middle-ranked in terms of `Pass` rate, probably because they benefit/suffer from having a lot of facilities in Chicago.
+
+TODO: comparer moyenne fast food avec moyenne restaurants classiques
+
 ## Risk analysis per neighbourhood
 
 \* insert risk map \*
