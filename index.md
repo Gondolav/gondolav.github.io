@@ -46,7 +46,7 @@ We have built small tables with the different features we found interesting on t
 
 ## Risk Analysis Per Neighbourhood
 
-One of the features we could use to perform an analysis of these food inspections is the **Risk** associated with each inspection. By risk here we mean the possibility of "adversely affecting the public's health". It can take 3 different values: **RISK 1 (HIGH)**, **RISK 2 (MEDIUM)** and **RISK 3 (LOW)**. Indeed, the estabooshments which are judged more risky will be more inspected than others. We chose to judge the neighbourhoods by their percentage of high risk food facilities as it appeared to be an accurate measure we could get from this feature. Indeed, such a test would probably tell us something about the safest places in Chicago food-wise.
+One of the features we could use to perform an analysis of these food inspections is the **Risk** associated with each inspection. By risk here we mean the possibility of "adversely affecting the public's health". It can take 3 different values: **RISK 1 (HIGH)**, **RISK 2 (MEDIUM)** and **RISK 3 (LOW)**. Indeed, the establishments which are judged more risky will be more inspected than others. We chose to judge the neighbourhoods by their percentage of high risk food facilities as it appeared to be an accurate measure we could get from this feature. Indeed, such a test would probably tell us something about the safest places in Chicago food-wise.
 We built the following map, which colours each community area according to its **RISK 1 (HIGH)** rate.
 
 <iframe src="maps/risk_map.html" width="50%" height="600px"></iframe>
