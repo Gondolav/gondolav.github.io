@@ -38,11 +38,11 @@ div {
 
 # Inspections and food establishments
 
-Chicago is home to 16,000 food establishments like restaurants, grocery stores, bakeries, wholesalers, lunchrooms, mobile food vendors and more. The city has many upscale dining establishments as well as many ethnic restaurant districts, including the Mexican American neighbourhoods, such as Pilsen along 18th street, and La Villita along 26th Street; the Puerto Rican enclave of Paseo Boricua in the Humboldt Park neighbourhood; Greektown, along South Halsted Street, immediately west of downtown; Little Italy, along Taylor Street; Chinatown in Armour Square; Polish Patches in West Town; Little Seoul in Albany Park around Lawrence Avenue; Little Vietnam near Broadway in Uptown; and the Desi area, along Devon Avenue in West Ridge.
+Chicago is home to 16,000 food establishments like restaurants, grocery stores, bakeries, wholesalers, lunchrooms, mobile food vendors and more. The city has many upscale dining establishments as well as many ethnic restaurant districts, including the Mexican American neighbourhoods, such as Pilsen along 18th Street, and La Villita along 26th Street; the Puerto Rican enclave of Paseo Boricua in the Humboldt Park neighbourhood; Greektown, along South Halsted Street, immediately west of downtown; Little Italy, along Taylor Street; Chinatown in Armour Square; Polish Patches in West Town; Little Seoul in Albany Park around Lawrence Avenue; Little Vietnam near Broadway in Uptown; and the Desi area, along Devon Avenue in West Ridge.
 
 To ensure the compliance with the [Chicago Food Code](https://www.chicago.gov/content/dam/city/depts/cdph/food_env/general/Food_Protection/FoodCodeRules_Effective_Feb12019.pdf), the **Chicago Department of Public Health (CDPH)** conducts routine, unannounced food inspections, also called *canvass inspections*. The goals of these inspections are:
 - to ensure the immediate safety of restaurant customers and employees;
-- to prevent foodborne illness outbreaks.
+- to prevent foodborne illness outbreaks;
 - to help the public learn which restaurants adhere to public health regulations.
 
 CDPH inspects most food establishments twice a year, with other establishments deemed as lower risk inspected once a year or once every other year. In addition to routine canvass inspections, CDPH also conducts license inspections for newly-opened businesses, complaint inspections in response to submitted concerns or suspected food poisoning, and re-inspections for issues arising from canvass inspections that require correction.
@@ -72,7 +72,7 @@ It appears that three facility types in particular have a higher failure rate th
    - the wholesale distributors
    - the taverns and bars
 
-A way of interpreting this would be to notice that when the main sold item is alcohol, less care is taken in making the facilities clean and safe. As for wholesale distributors, their size and the fact that they are mostly used by companies rather than individuals could explain a lack of neatness. Moreover, for taverns it could be harder to keep it as clean as other establishments because of the behavior of drunk clients.
+A way of interpreting this would be to notice that when the main sold item is alcohol, less care is taken in making the facilities clean and safe. As for wholesale distributors, their size and the fact that they are mostly used by companies rather than individuals could explain a lack of neatness. Moreover, for taverns it could be harder to keep it as clean as other establishments because of the behaviour of drunk clients.
 
 On the other hand, it is reassuring to observe that the most frequent establishment type, restaurant, has an average fail rate among the lowest. Moreover, facilities taking care of children (daycares, schools...) and hospitals seem to make an extra effort for food safety and show rigorous food management as they tend to have a low probability of inspection failing.
 
@@ -93,7 +93,7 @@ Fast-foods restaurants are undeniably forming a huge sector of modern catering a
   <img src="/graphs/graph_food_chains.png" width="900px">
 </div>
 
-The chain with the highest fail rate is **Papa John's Pizza**, followed by **Harold's Chicken Shack** and **Flat Top Grill**, which has however a significantly lower number of facilities (31 **Harold's Chicken Shack** and 19 **Flat Top Grill** versus 102 **McDonald's**). **Starbucks** and **Taco Bell** distinguish themselves by being the two chains with the highest pass rates, both around 80%. As for **Freshii**, **Wingstop** and **Domino's Pizza**, they have the highest **PASS W/ CONDITIONS** rate. Hence, their low pass rate shows that some of their establishments could be a bit more careful.
+The chain with the highest fail rate is **Papa John's Pizza**, followed by **Harold's Chicken Shack** and **Flat Top Grill**, which have however a significantly lower number of facilities (31 **Harold's Chicken Shack** and 19 **Flat Top Grill** versus 102 **McDonald's**). **Starbucks** and **Taco Bell** distinguish themselves by being the two chains with the highest pass rates, both around 80%. As for **Freshii**, **Wingstop** and **Domino's Pizza**, they have the highest **PASS W/ CONDITIONS** rate. Hence, their low pass rate shows that some of their establishments could be a bit more careful.
 
 Gathering these chains by the type of food they sell, we can notice that pizza restaurants have a higher tendency to fail inspections, whereas sandwich facilities appear to be quite successful in general.
 
@@ -103,44 +103,51 @@ Overall, we observe a mean fail rate of 18.4% for fast-food chains in Chicago ci
 
 TODO: add another analysis ?
 
-## Violation Analysis
+## Violation analysis
 
 We were provided with the comments related to each inspection. Although it would have been very difficult to perform an analysis over the comments themselves, these comments are fortunately classified into forty-six violation categories, which could be interpreted as the set of rules to follow to obtain a facility as safe as possible. Consequently, these rules appear in the comments when they are broken. That is what we will be focusing on in this section.
 
-To start simple, we simply extracted the most frequent violations to see if any scheme appeared. The most encountered one are the following:
-1. **34. FLOORS: CONSTRUCTED PER CODE, CLEANED, GOOD REPAIR, COVING INSTALLED, DUST-LESS CLEANING METHODS USED**
-2. **35. WALLS, CEILINGS, ATTACHED EQUIPMENT CONSTRUCTED PER CODE: GOOD REPAIR, SURFACES CLEAN AND DUST-LESS CLEANING METHODS**
-3. **33. FOOD AND NON-FOOD CONTACT EQUIPMENT UTENSILS CLEAN, FREE OF ABRASIVE DETERGENTS**
-4. **32. FOOD AND NON-FOOD CONTACT SURFACES PROPERLY DESIGNED, CONSTRUCTED AND MAINTAINED**
-5. **38. VENTILATION: ROOMS AND EQUIPMENT VENTED AS REQUIRED: PLUMBING: INSTALLED AND MAINTAINED**
+### Violation frequency
 
-These categories are indeed significant since they represent almost 60% of the met violations throughout all the inspections. It appears that the most difficult thing for the Chicago facilities is usually to keep their cooking and serving space (floors, ventilation, walls and ceilings) as well as their utensils clean and in good condition. We could remark that this task is probably one of the most difficult when we are dealing with food as it is a continuous work to make sure everything works well. Moreover, if we regard restaurants, cooks manipulate ingredients all day so it is not surprising to see their working spaces get dirty.
+To start simple, we simply extracted the most frequent violations to see if any scheme appeared. The most encountered ones are the following:
+1. **34. Floors: constructed per code, cleaned, good repair, coving installed, dust-less cleaning methods used**
+2. **35. Walls, ceilings, attached equipment constructed per code: good repair, surfaces clean and dust-less cleaning methods**
+3. **33. Food and non-food contact equipment utensils clean, free of abrasive detergents**
+4. **32. Food and non-food contact surfaces properly designed, constructed and maintained**
+5. **38. Ventilation: rooms and equipment vented as required: plumbing: installed and maintained**
+
+These categories are indeed significant since they represent almost 60% of the met violations throughout all the inspections. It appears that the most difficult thing for the Chicago facilities is usually to keep their cooking and serving space (floors, ventilation, walls and ceilings) as well as their utensils clean and in good condition. We could remark that this task is probably one of the most difficult when we are dealing with food as it is a continuous job to make sure everything works well. Moreover, if we regard restaurants, cooks manipulate ingredients all day so it is not surprising to see their working spaces get dirty.
+
+### Violations and failed inspections
 
 Nevertheless and unless there was an important accumulation of dirty or out-of-order equipment, these violations appear to be rather irrelevant in the sense that it would probably not cause the establishment's failure to the inspection. Let us verify this statement by visualizing the occurrence frequency of each category in case of a failed inspection and compute the difference with the previous results.
 
 The violation categories with the highest such frequency difference are listed here:
-1. **18. NO EVIDENCE OF RODENT OR INSECT OUTER OPENINGS PROTECTED/RODENT PROOFED, A WRITTEN LOG SHALL BE MAINTAINED AVAILABLE TO THE INSPECTORS**
-2. **29. PREVIOUS MINOR VIOLATION(S) CORRECTED 7-42-090**
-3. **19. OUTSIDE GARBAGE WASTE GREASE AND STORAGE AREA; CLEAN, RODENT PROOF, ALL CONTAINERS COVERED**
-4. **16. FOOD PROTECTED DURING STORAGE, PREPARATION, DISPLAY, SERVICE AND TRANSPORTATION**
-5. **24. DISH WASHING FACILITIES: PROPERLY DESIGNED, CONSTRUCTED, MAINTAINED, INSTALLED, LOCATED AND OPERATED**
+1. **18. No evidence of rodent or insect outer openings protected/rodent proofed, a written log shall be maintained available to the inspectors**
+2. **29. Previous minor violation(s) corrected 7-42-090**
+3. **19. Outside garbage waste grease and storage area; clean, rodent proof, all containers covered**
+4. **16. Food protected during storage, preparation, display, service and transportation**
+5. **24. Dish washing facilities: properly designed, constructed, maintained, installed, located and operated**
 
 Violation number **18** is clearly one of the most involved issues in an establishment's failure, with a presence in the comments of a failed inspection 5.8% higher than when considering all the inspections. We can then deduce that the presence of rodents or insects is a serious misconduct and highly increases the inspection's failure probability.
 Even though the difference are less significant (about 1%), we may also observe that rules related directly to food such as food protection, dishes neatness or garbage organisation appear more often in the inspections' comments in case of failure. This makes sense since the primary role of the inspections is to make sure the food in this facility is safe to eat and is correctly dealt with at every step.
 Finally, it is not surprising to see violation number **29** in the ranking as it is linked to the observance of the law [7-42-090](http://chicago-il.elaws.us/code/coor_t7_ch7-42_sec7-42-090) which among other things penalizes the non-correction of a violation upon re-inspection.
 
+### Violations and complaint-provoked inspections
+
 There are various types of inspections, one of them being **COMPLAINT** for inspections caused by clients' complaints. We take a look at the difference between the frequencies of violations in case of protest and the original frequencies. The following categories came out:
 
-1. **3. POTENTIALLY HAZARDOUS FOOD MEETS TEMPERATURE REQUIREMENT DURING STORAGE, PREPARATION DISPLAY AND SERVICE**
-2. **18. NO EVIDENCE OF RODENT OR INSECT OUTER OPENINGS PROTECTED/RODENT PROOFED, A WRITTEN LOG SHALL BE MAINTAINED AVAILABLE TO THE INSPECTORS**
-3. **29. PREVIOUS MINOR VIOLATION(S) CORRECTED 7-42-090**
-4. **6. HANDS WASHED AND CLEANED, GOOD HYGIENIC PRACTICES; NO BARE HAND CONTACT WITH READY-TO-EAT FOODS.**
+1. **3. Potentially hazardous food meets temperature requirement during storage, preparation display and service**
+2. **18. No evidence of rodent or insect outer openings protected/rodent proofed, a written log shall be maintained available to the inspectors**
+3. **29. Previous minor violation(s) corrected 7-42-090**
+4. **6. Hands washed and cleaned, good hygienic practices; no bare hand contact with ready-to-eat foods.**
 
 Overall the frequency difference is not really meaningful (at most 1.3%) so there appears to be no link between complaint-based inspections and violations. Nevertheless, we can still notice that clients tend to complain more about violations number **3**, **18** and **6**, probably because this aspect is more visible to them.
 
-To conclude with this analysis, we extract the most encountered violation category in each neighbourhood. Violation number **54** clearly wins here as it is the most met category in 54 out of 77 community areas.
-A violation analysis over the neighbourhoods is then not very insightful to get to know more about which parts of the city are the safest food-wise. This is the question we will address in the next part.
+### Violations and neighbourhoods
 
+To conclude with this analysis, we extract the most encountered violation category in each neighbourhood. Violation number **54** clearly wins here as it is the most met category in 54 out of 77 community areas.
+A violation analysis over the neighbourhoods is then not very insightful to get to know more about which parts of the city are the safest food-wise. This is the question we will address in the next parts.
 
 ## Risk analysis per neighbourhood
 
@@ -164,7 +171,7 @@ Here is the name of the five community areas with the lowest **HIGH** risk rate:
 4. **Grand Crossing**
 5. **New City**
 
-As expected, most of them are located in the Southwest Side, except for **Garfield Park** which can be found in the middle of the West Side of Chicago. In general, these neighbourhoods present similar ethnicity, education level and income level. !TODO ETHNICITY! Unfortunately, these indicators are low: with the exception of **Bridgeport**, in these community areas 70% of the population earns less than 50,000$ a year and less than 25% of the inhabitants have a university degree. Here, **Bridgeport** looks more like an outlier with its different ethnicity, its higher median income and its education level being as twice as high as the others.
+As expected, most of them are located in the Southwest Side, except for **Garfield Park** which can be found in the middle of the West Side of Chicago, mainly inhabited by African American populations. In general, these neighbourhoods present similar education level and income level. Unfortunately, these indicators are low: with the exception of **Bridgeport**, in these community areas 70% of the population earns less than 50,000$ a year and less than 25% of the inhabitants have a university degree. Here, **Bridgeport** looks more like an outlier with its different ethnicity, its higher median income and its education level being as twice as high as the others.
 
 Consequently, from these results, a good risk rate seems very surprisingly to be linked to the (lack of) wealth and education of a community area.
 
@@ -177,7 +184,7 @@ We now focus on the five worst neighbourhoods according to their risk rate, list
 4. **Armour Square**
 5. **Edison Park**
 
-It is quite hard to find common patterns to these five community areas. Geographically, four of them are located in the suburbs of Chicago: **Lincoln Square**,  **Norwood Park** and **Edison Park** are located in the Far North Side, while **East Side** is a Far Southeast Side neighbourhood. As for **Armour Square**, it is a central neighbourhood, the Chicago's *Chinatown*. The ethnicity is also heterogeneous, ranging from !TODO!, except for the African-American population that appears to be a minority. As for the education and income levels, they vary widely from one community area to the other, e.g. from a poor median income of 26,500 $ per year in **Armour Square** to a very high 99,200$ per year in **Edison Park**.
+It is quite hard to find common patterns to these five community areas. Geographically, four of them are located in the suburbs of Chicago: **Lincoln Square**,  **Norwood Park** and **Edison Park** are located in the Far North Side, while **East Side** is a Far Southeast Side neighbourhood. As for **Armour Square**, it is a central neighbourhood, the Chicago's *Chinatown*. The ethnicity is also heterogeneous, ranging from Caucasian to Hispanic via Asian communities, except for the African-American population that appears to be a minority. As for the education and income levels, they vary widely from one community area to the other, e.g. from a poor median income of 26,500$ per year in **Armour Square** to a very high 99,200$ per year in **Edison Park**.
 
 Hence, according to our findings, a Chicago neighbourhood's bad risk rate doesn't seem to be related to its location, its ethnicity, its education level or its income level.
 
@@ -206,8 +213,8 @@ We start with the top five community areas with respect to their pass rate:
 4. **Mount Greenwood**
 5. **Loop**
 
-**O'Hare** is the large community area at the extreme northwest of Chicago, while **Clearing**, **Ashburn** and **Mount Greenwood** are southwestern neighbourhoods. On the other hand, **Loop** is at the very heart of the city.
-These five community areas have quite diverse populations in terms of ethnicity, education level and income level. Nevertheless, we can notice that at least 25% of their population has a university degree and that they all have a median income of 50,000$ per year or more, two high statistics. In particular, **Loop**, the central business district in the downtown area of the city and home to Chicago's commercial core, has a huge university degree rate (83%) and median income (100,000 \$ per year).
+**O'Hare** is the large community area at the extreme northwest of Chicago, while **Clearing**, **Ashburn** and **Mount Greenwood** are southwestern neighbourhoods. On the other hand, **Loop** is located at the very heart of the city.
+These five community areas have quite diverse populations in terms of ethnicity, education level and income level. Nevertheless, we can notice that at least 25% of their population has a university degree and that they all have a median income of 50,000$ per year or more, two high statistics. In particular, **Loop**, the central business district in the downtown area of the city and home to Chicago's commercial core, has a huge university degree rate (83%) and median income (100,000\$ per year).
 
 Overall, given these results, we could hypothesize that high pass rates are related to prosperous neighbourhoods.
 
@@ -220,23 +227,23 @@ Let us now focus on the five community areas with the worst pass rate in Chicago
 4. **Grand Crossing**
 5. **Washington Park**
 
-The first two things to notice are that the ethnicity of these community areas is predominantly African-American, and that they are very close to each other geographically, as they are all located in the South Side. If the percentage of the population with a university degree is not that low !TODO GIVE THE PERCENTAGE!, the median income, on the other hand, is very limited: on average, 70% of the population of these neighbourhoods makes less than 50,000$ per year.
-
-### Inspections' results and neighbourhoods, explained
+The first two things to notice are that the ethnicity of these community areas is predominantly African-American, and that they are very close to each other geographically, as they are all located in the South Side. If the percentage of the population with a university degree is not that low, between 25 and 35%, the median income, on the other hand, is very limited: on average, 70% of the population of these neighbourhoods makes less than 50,000$ per year.
 
 The conclusion to draw here is rather clear: a low pass rate seems to be closely related to the (lack of) wealth and education of a Community Area. In particular, districts with an African-American population appear to be more struck by food safety issues. Besides, the fact that they all are neighbours seems to point out a large area of the city with safety issues regarding the food facilities.
+
+### Inspections' results and neighbourhoods, explained
 
 Consequently, the predisposition of a neighbourhood to have a good **PASS** rate appears to be somehow linked to its prosperity. It would then be safer to look for a restaurant or a groceries store in the wealthy community areas of Chicago, namely the Central, Far North, Southwest and Far Southwest Sides of Chicago. On one hand, we could see this as logical since facilities in richer areas may have more funds to make their place conform to all the safety norms. On the other hand, however, we could also consider it as some kind of injustice since the poorer are once again disadvantaged with more precarious establishments.
 
 ### Evolution of the pass rate over time
 
 <div style="text-align:center;">
-  <iframe src="maps/result_map.html" scrolling="no" frameborder="0" width="80%" height="600px"></iframe>
+  <iframe src="maps/result_per_year_map.html" scrolling="no" frameborder="0" width="80%" height="600px"></iframe>
 </div>
 
-It is quite hard to target repeating features as the map changes a lot throughout the years. If, of course, the neighbourhoods that we previously identified tend to have a higher/lower pass rate per year. But the majority of the other areas have good and bad years inspection-wise. For example, **Riverdale** goes from a poor rate in 2014 to a great one in 2015 before falling in 2016 to an even worse rate than in 2014. !TODO THIS PARAGRAPH IS NOT CLEAR!
+It is quite hard to target repeating features as the map changes a lot throughout the years. If, of course, the neighbourhoods that we previously identified tend to have a higher/lower pass rate per year, in fact the majority of the community areas have good and bad years inspection-wise. For example, **Riverdale** goes from a poor rate in 2014 to a great one in 2015 before falling in 2016 to an even worse rate than in 2014. To explain these observations, we could hypothesize that the **Chicago Department of Public Health (CDPH)** focuses on TODO.
 
-When comparing the years between them, we can notice that at first the food inspections were quite severe. This is revealed by the proportion of yellow/red neighbourhoods from 2010 to 2012. The map becomes much greener for the three subsequent years before getting slightly more red again after 2015. Maybe, there was a bit of change in the passing standards that made more establishments fail their food inspections. As for 2018, we could be biased by the fact that we only have data for the first half of the year.
+When comparing the years between them, we can notice that at first the food inspections were quite severe. This is revealed by the proportion of yellow/red neighbourhoods from 2010 to 2012. The map becomes much greener for the three subsequent years before getting slightly more red again after 2015. Maybe, there was a bit of change in the CDPH standards that made more establishments fail their food inspections. As for 2018, we could be biased by the fact that we only have data for the first half of the year.
 
 ### Inequalities unveiled
 
