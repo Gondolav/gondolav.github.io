@@ -239,7 +239,7 @@ Consequently, the predisposition of a neighbourhood to have a good **pass** rate
 ### Evolution of the pass rate over time
 
 <div style="text-align:center;">
-  <iframe src="maps/result_per_year_map.html" scrolling="no" frameborder="0" width="80%" height="600px"></iframe>
+  <iframe src="maps/result_per_year_map.html" frameborder="0" width="80%" height="600px"></iframe>
 </div>
 
 It is quite hard to target repeating features as the map changes a lot throughout the years. Even though the neighbourhoods that we previously identified tend to have a higher/lower pass rate per year, in fact the majority of the community areas have good and bad years inspection-wise. For example, **Riverdale** goes from a poor rate in 2014 to a great one in 2015 before falling in 2016 to an even worse rate than in 2014. To explain these observations, we could hypothesize that, depending on the community area and the year, the **Chicago Department of Public Health (CDPH)** focuses their inspections on facilities with more or less previously failed inspections, which would then have a higher or lower probability of passing the new inspection.
