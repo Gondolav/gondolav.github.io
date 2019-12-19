@@ -31,11 +31,11 @@ div {
 
 # Inspections and food establishments
 
-Chicago is home to 16,000 food establishments like restaurants, grocery stores, bakeries, wholesalers, lunchrooms, mobile food vendors and more. The city has many upscale dining establishments as well as many ethnic restaurant districts, including the Mexican American neighbourhoods, such as Pilsen along 18th street, and La Villita along 26th Street; the Puerto Rican enclave of Paseo Boricua in the Humboldt Park neighbourhood; Greektown, along South Halsted Street, immediately west of downtown; Little Italy, along Taylor Street; Chinatown in Armour Square; Polish Patches in West Town; Little Seoul in Albany Park around Lawrence Avenue; Little Vietnam near Broadway in Uptown; and the Desi area, along Devon Avenue in West Ridge.
+Chicago is home to 16,000 food establishments like restaurants, grocery stores, bakeries, wholesalers, lunchrooms, mobile food vendors and more. The city has many upscale dining establishments as well as many ethnic restaurant districts, including the Mexican American neighbourhoods, such as Pilsen along 18th Street, and La Villita along 26th Street; the Puerto Rican enclave of Paseo Boricua in the Humboldt Park neighbourhood; Greektown, along South Halsted Street, immediately west of downtown; Little Italy, along Taylor Street; Chinatown in Armour Square; Polish Patches in West Town; Little Seoul in Albany Park around Lawrence Avenue; Little Vietnam near Broadway in Uptown; and the Desi area, along Devon Avenue in West Ridge.
 
 To ensure the compliance with the [Chicago Food Code](https://www.chicago.gov/content/dam/city/depts/cdph/food_env/general/Food_Protection/FoodCodeRules_Effective_Feb12019.pdf), the **Chicago Department of Public Health (CDPH)** conducts routine, unannounced food inspections, also called *canvass inspections*. The goals of these inspections are:
 - to ensure the immediate safety of restaurant customers and employees;
-- to prevent foodborne illness outbreaks.
+- to prevent foodborne illness outbreaks;
 - to help the public learn which restaurants adhere to public health regulations.
 
 CDPH inspects most food establishments twice a year, with other establishments deemed as lower risk inspected once a year or once every other year. In addition to routine canvass inspections, CDPH also conducts license inspections for newly-opened businesses, complaint inspections in response to submitted concerns or suspected food poisoning, and re-inspections for issues arising from canvass inspections that require correction.
@@ -88,9 +88,11 @@ Overall, we observe a mean fail rate of 18.4% for fast-food chains in Chicago ci
 
 TODO: fail rate/income analysis ?
 
-## Violation Analysis
+## Violation analysis
 
 We were provided with the comments related to each inspection. Although it would have been very difficult to perform an analysis over the comments themselves, these comments are fortunately classified into forty-six violation categories, which could be interpreted as the set of rules to follow to obtain a facility as safe as possible. Consequently, these rules appear in the comments when they are broken. That is what we will be focusing on in this section.
+
+### Violation frequency
 
 To start simple, we simply extracted the most frequent violations to see if any scheme appeared. The most encountered one are the following:
 1. **34. FLOORS: CONSTRUCTED PER CODE, CLEANED, GOOD REPAIR, COVING INSTALLED, DUST-LESS CLEANING METHODS USED**
@@ -100,6 +102,8 @@ To start simple, we simply extracted the most frequent violations to see if any 
 5. **38. VENTILATION: ROOMS AND EQUIPMENT VENTED AS REQUIRED: PLUMBING: INSTALLED AND MAINTAINED**
 
 These categories are indeed significant since they represent almost 60% of the met violations throughout all the inspections. It appears that the most difficult thing for the Chicago facilities is usually to keep their cooking and serving space (floors, ventilation, walls and ceilings) as well as their utensils clean and in good condition. We could remark that this task is probably one of the most difficult when we are dealing with food as it is a continuous work to make sure everything works well. Moreover, if we regard restaurants, cooks manipulate ingredients all day so it is not surprising to see their working spaces get dirty.
+
+### Violations and failed inspections
 
 Nevertheless and unless there was an important accumulation of dirty or out-of-order equipment, these violations appear to be rather irrelevant in the sense that it would probably not cause the establishment's failure to the inspection. Let us verify this statement by visualizing the occurrence frequency of each category in case of a failed inspection and compute the difference with the previous results.
 
@@ -114,6 +118,8 @@ Violation number **18** is clearly one of the most involved issues in an establi
 Even though the difference are less significant (about 1%), we may also observe that rules related directly to food such as food protection, dishes neatness or garbage organisation appear more often in the inspections' comments in case of failure. This makes sense since the primary role of the inspections is to make sure the food in this facility is safe to eat and is correctly dealt with at every step.
 Finally, it is not surprising to see violation number **29** in the ranking as it is linked to the observance of the law [7-42-090](http://chicago-il.elaws.us/code/coor_t7_ch7-42_sec7-42-090) which among other things penalizes the non-correction of a violation upon re-inspection.
 
+### Violations and complaint-provoked inspections
+
 There are various types of inspections, one of them being **COMPLAINT** for inspections caused by clients' complaints. We take a look at the difference between the frequencies of violations in case of protest and the original frequencies. The following categories came out:
 
 1. **3. POTENTIALLY HAZARDOUS FOOD MEETS TEMPERATURE REQUIREMENT DURING STORAGE, PREPARATION DISPLAY AND SERVICE**
@@ -125,7 +131,6 @@ Overall the frequency difference is not really meaningful (at most 1.3%) so ther
 
 To conclude with this analysis, we extract the most encountered violation category in each neighbourhood. Violation number **54** clearly wins here as it is the most met category in 54 out of 77 community areas.
 A violation analysis over the neighbourhoods is then not very insightful to get to know more about which parts of the city are the safest food-wise. This is the question we will address in the next part.
-
 
 ## Risk analysis per neighbourhood
 

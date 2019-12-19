@@ -37,9 +37,13 @@ en:
           url:    /#facility-types-and-their-predisposition-to-failure
         - title:  Fast-food restaurant chains
           url:    /#fast-food-restaurant-chains
+        - title:  Violation analysis
+          url:    /#violation-analysis
         - title:  Risk analysis per neighbourhood
           url:    /#risk-analysis-per-neighbourhood
         - title:  Result analysis per neighbourhood
           url:    /#result-analysis-per-neighbourhood
+        - title:  Inspection effects on establishments
+          url:    /#inspection-effects-on-establishments
         - title:  What have we learned?
           url:    /#what-have-we-learned
