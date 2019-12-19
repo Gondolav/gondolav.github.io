@@ -58,7 +58,7 @@ In this article, we first take a look at the different facilities' predispositio
 We use the [Chicago Metropolitan Agency for Planning website](https://www.cmap.illinois.gov/data/community-snapshots) to interpret in a deeper way our results, as they provide community snapshots that summarize demographics, housing, employment, transportation habits, retail sales, property values, and land use in all 77 Chicago community areas, which correspond to the "neighbourhoods" we are considering.
 <!-- We have built small tables with the different features we found interesting on the best and worse Community Areas according to the two main aspects we considered, namely the **RISK 1 (HIGH)** rate and the **PASS** rate. -->
 
-## Facility types and their predisposition to failure
+## Facility types analysis
 
 Food inspection concerns a very large variety of catering-related services. Let's see if and how the facility types and inspection results are tied to one another. As one would expect, the distribution of these facilities is extremely uneven: restaurants are by far the most represented type in Chicago counting 18,073 distinct establishments, which corresponds to 60% of the city's facilities. It is followed by grocery stores with 5,792 instances (20%) and by schools with a total of 1,125 facilities (4%). Let's now take a look at the **average fail rate per facility type**:
 
@@ -76,7 +76,7 @@ A way of interpreting this would be to notice that when the main sold item is al
 
 On the other hand, it is reassuring to observe that the most frequent establishment type, restaurant, has an average fail rate among the lowest. Moreover, facilities taking care of children (daycares, schools...) and hospitals seem to make an extra effort for food safety and show rigorous food management as they tend to have a low probability of inspection failing.
 
-Overall is is difficult to extract any really meaningful generalization but it seems that the fail rate follows a rather intuitive behavior since the facilities that are the most critical for public health are well regulated and the ones that have more recreative purposes are not as strict regarding food safety. Actually, each establishment has an associated risk factor reported in the inspections. We can assess the validity of the previously proposed explanation by analyzing the risk distribution of the main facility types:
+Overall it is difficult to extract any really meaningful generalization but it seems that the fail rate follows a rather intuitive behaviour since the facilities that are the most critical for public health are well regulated and the ones that have more recreative purposes are not as strict regarding food safety. Actually, each establishment has an associated risk factor reported in the inspections. We can assess the validity of the previously proposed explanation by analysing the risk distribution of the main facility types:
 
 <figure class="highcharts-figure">
     <div id="container"></div>
@@ -151,7 +151,7 @@ A violation analysis over the neighbourhoods is then not very insightful to get 
 
 ## Risk analysis per neighbourhood
 
-One of the features we could use to perform an analysis of the food inspections is the **Risk** associated with each inspection. By risk, here we mean the possibility of *adversely affecting the public's health*. It can take 3 different values: **high**, **medium** and **low**. Indeed, the establishments which are judged more risky will be more inspected than others. We chose to judge the neighbourhoods by their percentage of high risk food facilities as it appeared to be an accurate measure we could get from this feature. Indeed, such a test would probably tell us something about the safest places in Chicago food-wise.
+One of the features we could use to perform an analysis of the food inspections is the **Risk** associated with each inspection. By risk, here we mean the possibility of *adversely affecting the public's health*. It can take 3 different values: **high**, **medium** and **low**. Indeed, the establishments which are judged more risky will be more inspected than others, and we found out earlier that it was closely related to the facility type. We chose to judge the neighbourhoods by their percentage of high risk food facilities as it appeared to be an accurate measure we could get from this feature. Indeed, such a test would probably tell us something about the safest places in Chicago food-wise.
 We built the following map, which colours each community area according to its **high** risk rate.
 
 <div style="text-align:center;">
@@ -190,7 +190,9 @@ Hence, according to our findings, a Chicago neighbourhood's bad risk rate doesn'
 
 ### Risk and neighbourhoods, explained
 
-To conclude, we can say that this *a priori* feature which is the risk doesn't really seem to be related to the location of the facility. The only apparent correlation is that poorer neighbourhoods seem to have less risky facilities on average than the others. We can view this as a good point as it could mean that the city doesn't rely on education or income level of the neighbourhood  of a given establishment to determine its risk. On the other hand, these results could also be seen as a lack of consideration for these left-aside areas whereas they would definitely need more attention from the municipality. Let us perform a result analysis to unravel these questions.
+To conclude, we can say that this *a priori* feature which is the risk doesn't really seem to be related to the location of the facility. The only apparent correlation is that poorer neighbourhoods seem to have less risky facilities on average than the others. This can be explained by the fact that these community areas may own less sensitive facilities like hospitals, schools or daycares, which have a higher risk in general. We can view this as a lack of consideration for these left-aside areas whereas they would definitely need more attention from the municipality.
+
+We also noticed earlier that a lower risk meant an higher fail rate. We will verify and deepen this assumption with the following analysis, and draw the appropriate conclusions.
 
 ## Result analysis per neighbourhood
 
@@ -249,7 +251,7 @@ When comparing the years between them, we can notice that at first the food insp
 
 As a general conclusion for this analysis, we can affirm that facilities which fail their inspections appear to be concentrated in poor neighbourhoods, mainly inhabited by African-American people. We can make a link here with a larger problem in Chicago: the [legacy of segregation](https://www.theatlantic.com/business/archive/2018/03/chicago-segregation-poverty/556649/?fbclid=IwAR2BkpgrKDsfh1mc-oAMug5Hd6fOuPBIjLxtH0wEj4xxZhalmpM0ZAYBcRk). Indeed, the majority of the money generated by the city of Chicago is invested in the wealthiest neighbourhoods, especially in the **Loop**, the central business district. It would be a good idea for the city hall to focus on those left-aside community areas and improve the quality of the food establishments there.
 
--> no access to education for poor populations and less and less job opportunities without a diploma
+As a starting point, more hospitals and schools could be opened in the most deprived neighbourhoods to give a better access to education and healthcare to the underprivileged, who would need both of them to find proper jobs and have enough money for living. 
 
 ## Inspection effects on establishments
 
