@@ -18,7 +18,12 @@ article_header:
 ---
 <!--more-->
 
-<div style="text-align: justify">
+<!--<style>
+div {
+  text-align: justify;
+  text-justify: inter-word;
+}
+</style>-->
 
 # The setting
 
@@ -260,5 +265,3 @@ While analyzing the inspections' results, we discovered that **severe inequaliti
 NOT DONE YET, WAITING FOR THE DATA STORY TO BE COMPLETE
 
 - summary of each section? (including brief summary of the safest neighbourhoods?)
-
-</div>
