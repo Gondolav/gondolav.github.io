@@ -88,6 +88,45 @@ Overall, we observe a mean fail rate of 18.4% for fast-food chains in Chicago ci
 
 TODO: fail rate/income analysis ?
 
+## Violation Analysis
+
+We were provided with the comments related to each inspection. Although it would have been very difficult to perform an analysis over the comments themselves, these comments are fortunately classified into forty-six violation categories, which could be interpreted as the set of rules to follow to obtain a facility as safe as possible. Consequently, these rules appear in the comments when they are broken. That is what we will be focusing on in this section.
+
+To start simple, we simply extracted the most frequent violations to see if any scheme appeared. The most encountered one are the following:
+1. **34. FLOORS: CONSTRUCTED PER CODE, CLEANED, GOOD REPAIR, COVING INSTALLED, DUST-LESS CLEANING METHODS USED**
+2. **35. WALLS, CEILINGS, ATTACHED EQUIPMENT CONSTRUCTED PER CODE: GOOD REPAIR, SURFACES CLEAN AND DUST-LESS CLEANING METHODS**
+3. **33. FOOD AND NON-FOOD CONTACT EQUIPMENT UTENSILS CLEAN, FREE OF ABRASIVE DETERGENTS**
+4. **32. FOOD AND NON-FOOD CONTACT SURFACES PROPERLY DESIGNED, CONSTRUCTED AND MAINTAINED**
+5. **38. VENTILATION: ROOMS AND EQUIPMENT VENTED AS REQUIRED: PLUMBING: INSTALLED AND MAINTAINED**
+
+These categories are indeed significant since they represent almost 60% of the met violations throughout all the inspections. It appears that the most difficult thing for the Chicago facilities is usually to keep their cooking and serving space (floors, ventilation, walls and ceilings) as well as their utensils clean and in good condition. We could remark that this task is probably one of the most difficult when we are dealing with food as it is a continuous work to make sure everything works well. Moreover, if we regard restaurants, cooks manipulate ingredients all day so it is not surprising to see their working spaces get dirty.
+
+Nevertheless and unless there was an important accumulation of dirty or out-of-order equipment, these violations appear to be rather irrelevant in the sense that it would probably not cause the establishment's failure to the inspection. Let us verify this statement by visualizing the occurrence frequency of each category in case of a failed inspection and compute the difference with the previous results.
+
+The violation categories with the highest such frequency difference are listed here:
+1. **18. NO EVIDENCE OF RODENT OR INSECT OUTER OPENINGS PROTECTED/RODENT PROOFED, A WRITTEN LOG SHALL BE MAINTAINED AVAILABLE TO THE INSPECTORS**
+2. **29. PREVIOUS MINOR VIOLATION(S) CORRECTED 7-42-090**
+3. **19. OUTSIDE GARBAGE WASTE GREASE AND STORAGE AREA; CLEAN, RODENT PROOF, ALL CONTAINERS COVERED**
+4. **16. FOOD PROTECTED DURING STORAGE, PREPARATION, DISPLAY, SERVICE AND TRANSPORTATION**
+5. **24. DISH WASHING FACILITIES: PROPERLY DESIGNED, CONSTRUCTED, MAINTAINED, INSTALLED, LOCATED AND OPERATED**
+
+Violation number **18** is clearly one of the most involved issues in an establishment's failure, with a presence in the comments of a failed inspection 5.8% higher than when considering all the inspections. We can then deduce that the presence of rodents or insects is a serious misconduct and highly increases the inspection's failure probability.
+Even though the difference are less significant (about 1%), we may also observe that rules related directly to food such as food protection, dishes neatness or garbage organisation appear more often in the inspections' comments in case of failure. This makes sense since the primary role of the inspections is to make sure the food in this facility is safe to eat and is correctly dealt with at every step.
+Finally, it is not surprising to see violation number **29** in the ranking as it is linked to the observance of the law [7-42-090](http://chicago-il.elaws.us/code/coor_t7_ch7-42_sec7-42-090) which among other things penalizes the non-correction of a violation upon re-inspection.
+
+There are various types of inspections, one of them being **COMPLAINT** for inspections caused by clients' complaints. We take a look at the difference between the frequencies of violations in case of protest and the original frequencies. The following categories came out:
+
+1. **3. POTENTIALLY HAZARDOUS FOOD MEETS TEMPERATURE REQUIREMENT DURING STORAGE, PREPARATION DISPLAY AND SERVICE**
+2. **18. NO EVIDENCE OF RODENT OR INSECT OUTER OPENINGS PROTECTED/RODENT PROOFED, A WRITTEN LOG SHALL BE MAINTAINED AVAILABLE TO THE INSPECTORS**
+3. **29. PREVIOUS MINOR VIOLATION(S) CORRECTED 7-42-090**
+4. **6. HANDS WASHED AND CLEANED, GOOD HYGIENIC PRACTICES; NO BARE HAND CONTACT WITH READY-TO-EAT FOODS.**
+
+Overall the frequency difference is not really meaningful (at most 1.3%) so there appears to be no link between complaint-based inspections and violations. Nevertheless, we can still notice that clients tend to complain more about violations number **3**, **18** and **6**, probably because this aspect is more visible to them.
+
+To conclude with this analysis, we extract the most encountered violation category in each neighbourhood. Violation number **54** clearly wins here as it is the most met category in 54 out of 77 community areas.
+A violation analysis over the neighbourhoods is then not very insightful to get to know more about which parts of the city are the safest food-wise. This is the question we will address in the next part.
+
+
 ## Risk analysis per neighbourhood
 
 One of the features we could use to perform an analysis of the food inspections is the **Risk** associated with each inspection. By risk, here we mean the possibility of *adversely affecting the public's health*. It can take 3 different values: **HIGH**, **MEDIUM** and **LOW**. Indeed, the establishments which are judged more risky will be more inspected than others. We chose to judge the neighbourhoods by their percentage of high risk food facilities as it appeared to be an accurate measure we could get from this feature. Indeed, such a test would probably tell us something about the safest places in Chicago food-wise.
@@ -187,6 +226,28 @@ When comparing the years between them, we can notice that at first the food insp
 As a general conclusion for this analysis, we can affirm that facilities which fail their inspections appear to be concentrated in poor neighbourhoods, mainly inhabited by African-American people. We can make a link here with a larger problem in Chicago: the [legacy of segregation](https://www.theatlantic.com/business/archive/2018/03/chicago-segregation-poverty/556649/?fbclid=IwAR2BkpgrKDsfh1mc-oAMug5Hd6fOuPBIjLxtH0wEj4xxZhalmpM0ZAYBcRk). Indeed, the majority of the money generated by the city of Chicago is invested in the wealthiest neighbourhoods, especially in the **Loop**, the central business district. It would be a good idea for the city hall to focus on those left-aside community areas and improve the quality of the food establishments there.
 
 -> no access to education for poor populations and less and less job opportunities without a diploma
+
+## Inspection effects on establishments
+
+The very first idea that came to our head is to check if inspections were efficient, i.e. if they truly had an impact on the quality and safety of the food facilities. That is the main question we will intent to answer in this part.
+
+First, let us draw a graph of the inspections and their results over the years to see if there is any evolution:
+
+![results graph](graphs/results.png)
+
+It seems that the inspections' **PASS** rate is decreasing through time, while the **PASS W/ CONDITIONS** and **FAIL** rates have been slightly increasing the past few years. This could be a clue that inspecting does not actually increase establishments' quality, but we investigated further.
+
+First, we compared the percentage for each result in case of re-inspection and the one in case of (first) inspection. Here, we didn't consider special inspection results (out of business, no entry, not located), as they didn't have any reinspection follow-up. Consequently, we didn't consider the re-inspections yielding those specials results either, to remain consistent in our statistics comparison. From this computation we got an increase of 24.4% of the pass rate between inspections and re-inspections along with a decrease of 17.5% of the fail rate. So it appears that in fact inspecting improves quite a lot the quality of the facilities.
+
+Then, we noticed that an important part of the inspections are in fact a **CONSULTATION** requested by the establishment itself. We thought it would also be interesting to see if requesting an inspection also improved your chances of passing it. And indeed, on average, inspections requested by the establishments have a higher success  rate (+9%) as well as a lower failing rate (-4.2%). Indeed, expecting an inspection intuitively increases the success rate because the owner is more likely to be prepared for it.
+
+To conclude, it is quite obvious that inspections do have a positive effect on the facilities. After all, it makes sense since these inquiries point out the defects in an establishment's safety, thus allowing the owners to improve it and make sure there is no food risk for the clients coming to their place.
+
+/* Quick insights on evolution of inspections over the years but don't know how to integrate them into the rest of it /*
+
+We also took a look at the evolution of the inspections throughout a calendar year. We noticed that during summer and winter holidays the number of inspections drops heavily.
+Plotting the number of inspections per year from 2010 to 2018 told us quite a lot of things as well. First of all, the number of inspections has significantly increased from 2010 to 2016, passing from 17000 to more than 22000 inspections per year. We remarked a small drop between 2016 and 2017. Furthermore, year 2018 is incomplete as it only takes into account the inspections up to July 1st, so we theoretically only have half the inspections for 2018 in our dataset. Following this assumption though, there should also be a drop between 2017 and 2018 as there has been less than 10000 inspections so far.
+
 
 # What have we learned?
 
