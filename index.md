@@ -30,8 +30,6 @@ div {
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
-<link rel="stylesheet" type="text/css" href="bar_plot_style.css">
-
 # The setting
 
 **Chicago** is the third most populous and the second most visited city in the United States. It is an international hub for finance, culture, commerce, industry, education, technology, telecommunications and transportation. The Chicago area [has one of the highest gross domestic product (GDP) in the world](https://www.bea.gov/system/files/2018-09/gdp_metro0918_0.pdf) and the [most balanced economy in the U.S.](http://www.worldbusinesschicago.com/economy), due to its high level of diversification. Moreover, the *Windy City* ranks first globally in the [2018 Time Out City Life Index](https://www.timeout.com/chicago/news/chicago-named-the-worlds-best-city-for-having-it-all-012918), a quality of life survey, and seventh for the highest number of [ultra-high-net-worth residents](https://www.chicagobusiness.com/finance-banking/these-are-cities-most-ultra-rich-people): roughly 3,300 residents are worth more than $30 million. Nevertheless, Chicago is also a city of contradictions and inequalities: according to the 2008-2012 U.S. Census Bureau's American Community Survey, about 18.3% of families and 22.1% of the population lived below the poverty line.
@@ -63,7 +61,7 @@ We use the [Chicago Metropolitan Agency for Planning website](https://www.cmap.i
 Food inspection concerns a very large variety of catering-related services. Let's see if and how the facility types and inspection results are tied to one another. As one would expect, the distribution of these facilities is extremely uneven: restaurants are by far the most represented type in Chicago counting 18,073 distinct establishments, which corresponds to 60% of the city's facilities. It is followed by grocery stores with 5,792 instances (20%) and by schools with a total of 1,125 facilities (4%). Let's now take a look at the **average fail rate per facility type**:
 
 <figure class="highcharts-figure">
-    <div id="container"></div>
+    <div id="graph_facility_types"></div>
     <script src="js/graph_facility_types.js"></script>
 </figure>
 
@@ -79,8 +77,8 @@ On the other hand, it is reassuring to observe that the most frequent establishm
 Overall is is difficult to extract any really meaningful generalization but it seems that the fail rate follows a rather intuitive behavior since the facilities that are the most critical for public health are well regulated and the ones that have more recreative purposes are not as strict regarding food safety. Actually, each establishment has an associated risk factor reported in the inspections. We can assess the validity of the previously proposed explanation by analyzing the risk distribution of the main facility types:
 
 <figure class="highcharts-figure">
-    <div id="container"></div>
-    <script src="js/graph_facility_types.js"></script>
+    <div id="graph_risk_facility_types"></div>
+    <script src="js/graph_risk_facility_types.js"></script>
 </figure>
 
 The food safety seems indeed correlated to the risk assessed by the inspectors. We can see that the most sensitive facilities are the one taking care of children, elders or hospital patients, and that they indeed have a low fail rate as concluded earlier. Furthermore, the establishments with the highest fail rate are mainly marked as not risky, which fits the previous observations.
