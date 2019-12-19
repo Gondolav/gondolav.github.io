@@ -66,7 +66,9 @@ It appears that three facility types in particular have a higher failure rate th
 
 A way of interpreting this would be to notice that when the main sold item is alcohol, less care is taken in making the facilities clean and safe. As for wholesale distributors, their size and the fact that they are mostly used by companies rather than individuals could explain a lack of neatness. Moreover, for taverns it could be harder to keep it as clean as other establishments because of the behavior of drunk clients.
 
-TODO: Discuss low fail rates
+On the other hand, it is reassuring to observe that the most frequent establishment type, restaurant, has an average fail rate among the lowest. Moreover, facilities taking care of children (daycares, schools...) and hospitals seem to make an extra effort for food safety and show rigorous food management as they tend to have a low probability of inspection failing.
+
+Overall is is difficult to extract any really meaningful generalization but it seems that the fail rate follows a rather intuitive behavior since the facilities that are the most critical for public health are well regulated and the ones that have more recreative purposes are not as strict regarding food safety.
 
 ## Fast-food restaurant chains
 
