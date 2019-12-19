@@ -30,8 +30,6 @@ div {
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
-<link rel="stylesheet" type="text/css" href="bar_plot_style.css">
-
 # The setting
 
 **Chicago** is the third most populous and the second most visited city in the United States. It is an international hub for finance, culture, commerce, industry, education, technology, telecommunications and transportation. The Chicago area [has one of the highest gross domestic product (GDP) in the world](https://www.bea.gov/system/files/2018-09/gdp_metro0918_0.pdf) and the [most balanced economy in the U.S.](http://www.worldbusinesschicago.com/economy), due to its high level of diversification. Moreover, the *Windy City* ranks first globally in the [2018 Time Out City Life Index](https://www.timeout.com/chicago/news/chicago-named-the-worlds-best-city-for-having-it-all-012918), a quality of life survey, and seventh for the highest number of [ultra-high-net-worth residents](https://www.chicagobusiness.com/finance-banking/these-are-cities-most-ultra-rich-people): roughly 3,300 residents are worth more than $30 million. Nevertheless, Chicago is also a city of contradictions and inequalities: according to the 2008-2012 U.S. Census Bureau's American Community Survey, about 18.3% of families and 22.1% of the population lived below the poverty line.
@@ -63,7 +61,7 @@ We use the [Chicago Metropolitan Agency for Planning website](https://www.cmap.i
 Food inspection concerns a very large variety of catering-related services. Let's see if and how the facility types and inspection results are tied to one another. As one would expect, the distribution of these facilities is extremely uneven: restaurants are by far the most represented type in Chicago counting 18,073 distinct establishments, which corresponds to 60% of the city's facilities. It is followed by grocery stores with 5,792 instances (20%) and by schools with a total of 1,125 facilities (4%). Let's now take a look at the **average fail rate per facility type**:
 
 <figure class="highcharts-figure">
-    <div id="container"></div>
+    <div id="graph_facility_types"></div>
     <script src="js/graph_facility_types.js"></script>
 </figure>
 
@@ -79,8 +77,8 @@ On the other hand, it is reassuring to observe that the most frequent establishm
 Overall it is difficult to extract any really meaningful generalization but it seems that the fail rate follows a rather intuitive behaviour since the facilities that are the most critical for public health are well regulated and the ones that have more recreative purposes are not as strict regarding food safety. Actually, each establishment has an associated risk factor reported in the inspections. We can assess the validity of the previously proposed explanation by analysing the risk distribution of the main facility types:
 
 <figure class="highcharts-figure">
-    <div id="container"></div>
-    <script src="js/graph_facility_types.js"></script>
+    <div id="graph_risk_facility_types"></div>
+    <script src="js/graph_risk_facility_types.js"></script>
 </figure>
 
 The food safety seems indeed correlated to the risk assessed by the inspectors. We can see that the most sensitive facilities are the one taking care of children, elders or hospital patients, and that they indeed have a low fail rate as concluded earlier. Furthermore, the establishments with the highest fail rate are mainly marked as not risky, which fits the previous observations.
@@ -89,9 +87,10 @@ The food safety seems indeed correlated to the risk assessed by the inspectors. 
 
 Fast-foods restaurants are undeniably forming a huge sector of modern catering and are well-known to the average consumer. Conducting a study about the popular chains located in Chicago is a good way to reveal insights about food quality in these establishments and find out how they compare to one another. We selected the chains that had the largest number of open restaurants in the city in order to have stable and accurate data. Let's take a look at their inspection result distribution:
 
-<div style="text-align:center;">
-  <img src="/graphs/graph_food_chains.png" width="900px">
-</div>
+<figure class="highcharts-figure">
+    <div id="graph_food_chains"></div>
+    <script src="js/graph_food_chains.js"></script>
+</figure>
 
 The chain with the highest fail rate is **Papa John's Pizza**, followed by **Harold's Chicken Shack** and **Flat Top Grill**, which have however a significantly lower number of facilities (31 **Harold's Chicken Shack** and 19 **Flat Top Grill** versus 102 **McDonald's**). **Starbucks** and **Taco Bell** distinguish themselves by being the two chains with the highest pass rates, both around 80%. As for **Freshii**, **Wingstop** and **Domino's Pizza**, they have the highest **PASS W/ CONDITIONS** rate. Hence, their low pass rate shows that some of their establishments could be a bit more careful.
 
@@ -251,7 +250,7 @@ When comparing the years between them, we can notice that at first the food insp
 
 As a general conclusion for this analysis, we can affirm that facilities which fail their inspections appear to be concentrated in poor neighbourhoods, mainly inhabited by African-American people. We can make a link here with a larger problem in Chicago: the [legacy of segregation](https://www.theatlantic.com/business/archive/2018/03/chicago-segregation-poverty/556649/?fbclid=IwAR2BkpgrKDsfh1mc-oAMug5Hd6fOuPBIjLxtH0wEj4xxZhalmpM0ZAYBcRk). Indeed, the majority of the money generated by the city of Chicago is invested in the wealthiest neighbourhoods, especially in the **Loop**, the central business district. It would be a good idea for the city hall to focus on those left-aside community areas and improve the quality of the food establishments there.
 
-As a starting point, more hospitals and schools could be opened in the most deprived neighbourhoods to give a better access to education and healthcare to the underprivileged, who would need both of them to find proper jobs and have enough money for living. 
+As a starting point, more hospitals and schools could be opened in the most deprived neighbourhoods to give a better access to education and healthcare to the underprivileged, who would need both of them to find proper jobs and have enough money for living.
 
 ## Inspection effects on establishments
 
