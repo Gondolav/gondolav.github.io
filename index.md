@@ -120,7 +120,7 @@ Finally, it is not surprising to see violation number **29** in the ranking as i
 
 ### Violations and complaint-provoked inspections
 
-There are various types of inspections, one of them being **COMPLAINT** for inspections caused by clients' complaints. We take a look at the difference between the frequencies of violations in case of protest and the original frequencies. The following categories came out:
+There are various types of inspections, one of them being **complaint** for inspections caused by clients' complaints. We take a look at the difference between the frequencies of violations in case of protest and the original frequencies. The following categories came out:
 
 1. **3. Potentially hazardous food meets temperature requirement during storage, preparation display and service**
 2. **18. No evidence of rodent or insect outer openings protected/rodent proofed, a written log shall be maintained available to the inspectors**
@@ -136,20 +136,20 @@ A violation analysis over the neighbourhoods is then not very insightful to get 
 
 ## Risk analysis per neighbourhood
 
-One of the features we could use to perform an analysis of the food inspections is the **Risk** associated with each inspection. By risk, here we mean the possibility of *adversely affecting the public's health*. It can take 3 different values: **HIGH**, **MEDIUM** and **LOW**. Indeed, the establishments which are judged more risky will be more inspected than others. We chose to judge the neighbourhoods by their percentage of high risk food facilities as it appeared to be an accurate measure we could get from this feature. Indeed, such a test would probably tell us something about the safest places in Chicago food-wise.
-We built the following map, which colours each community area according to its **HIGH** risk rate.
+One of the features we could use to perform an analysis of the food inspections is the **Risk** associated with each inspection. By risk, here we mean the possibility of *adversely affecting the public's health*. It can take 3 different values: **high**, **medium** and **low**. Indeed, the establishments which are judged more risky will be more inspected than others. We chose to judge the neighbourhoods by their percentage of high risk food facilities as it appeared to be an accurate measure we could get from this feature. Indeed, such a test would probably tell us something about the safest places in Chicago food-wise.
+We built the following map, which colours each community area according to its **high** risk rate.
 
 <div style="text-align:center;">
-  <iframe src="maps/risk_map.html" width="80%" height="600px"></iframe>
+  <iframe src="maps/risk_map.html" frameborder="0" width="80%" height="600px"></iframe>
 </div>
 
-The areas with the most important **HIGH** risk rate are mostly located in the Central, Far North, Northwest and North sides of Chicago. This is rather surprising since these parts of the city are mostly populated with middle-class and well-off populations. On the other hand, the Southwest and South sides of Chicago tend to have a lower risk rate, despite the fact that they are comprised of districts with a much lower median income.
+The areas with the most important **high** risk rate are mostly located in the Central, Far North, Northwest and North sides of Chicago. This is rather surprising since these parts of the city are mostly populated with middle-class and well-off populations. On the other hand, the Southwest and South sides of Chicago tend to have a lower risk rate, despite the fact that they are comprised of districts with a much lower median income.
 
 Let us now go deeper in our interpretation thanks to the [Chicago Metropolitan Agency for Planning website](https://www.cmap.illinois.gov/data/community-snapshots), as mentioned above.
 
 ### The best neighbourhoods, risk-wise
 
-Here is the name of the five community areas with the lowest **HIGH** risk rate:
+Here is the name of the five community areas with the lowest **high** risk rate:
 1. **Garfield Park**
 2. **Englewood**
 3. **Bridgeport**
@@ -179,10 +179,10 @@ To conclude, we can say that this *a priori* feature which is the risk doesn't r
 
 ## Result analysis per neighbourhood
 
-Another very interesting feature present in the inspections is obviously the **Result** of the inspection. We decided to focus on the three main possible results: **PASS**, **PASS W/ CONDITIONS** and **FAIL**. Gathering the two first possibilities into a global pass, this provided us with a pass and a fail rates summing up to 1. We can now portray the community areas by their percentage of successful inspections and get the following map:
+Another very interesting feature present in the inspections is obviously the **Result** of the inspection. We decided to focus on the three main possible results: **pass**, **pass with conditions** and **fail**. Gathering the two first possibilities into a global pass, this provided us with a pass and a fail rates summing up to 1. We can now portray the community areas by their percentage of successful inspections and get the following map:
 
 <div style="text-align:center;">
-  <iframe src="maps/result_map.html" width="80%" height="600px"></iframe>
+  <iframe src="maps/result_map.html" frameborder="0" width="80%" height="600px"></iframe>
 </div>
 
 The central district **Loop** as well as the edge areas of the city share the highest rates when regarding the passed inspections. They are wealthy neighbourhoods, which could explain why a peculiar care seems to be taken in making food facilities safe. We clearly cannot say the same about the South Side of Chicago, which gathers the Community Areas with the highest **FAIL** rates.
@@ -218,7 +218,7 @@ The conclusion to draw here is rather clear: a low pass rate seems to be closely
 
 ### Inspections' results and neighbourhoods, explained
 
-Consequently, the predisposition of a neighbourhood to have a good **PASS** rate appears to be somehow linked to its prosperity. It would then be safer to look for a restaurant or a groceries store in the wealthy community areas of Chicago, namely the Central, Far North, Southwest and Far Southwest Sides of Chicago. On one hand, we could see this as logical since facilities in richer areas may have more funds to make their place conform to all the safety norms. On the other hand, however, we could also consider it as some kind of injustice since the poorer are once again disadvantaged with more precarious establishments.
+Consequently, the predisposition of a neighbourhood to have a good **pass** rate appears to be somehow linked to its prosperity. It would then be safer to look for a restaurant or a groceries store in the wealthy community areas of Chicago, namely the Central, Far North, Southwest and Far Southwest Sides of Chicago. On one hand, we could see this as logical since facilities in richer areas may have more funds to make their place conform to all the safety norms. On the other hand, however, we could also consider it as some kind of injustice since the poorer are once again disadvantaged with more precarious establishments.
 
 ### Evolution of the pass rate over time
 
@@ -226,7 +226,7 @@ Consequently, the predisposition of a neighbourhood to have a good **PASS** rate
   <iframe src="maps/result_per_year_map.html" scrolling="no" frameborder="0" width="80%" height="600px"></iframe>
 </div>
 
-It is quite hard to target repeating features as the map changes a lot throughout the years. If, of course, the neighbourhoods that we previously identified tend to have a higher/lower pass rate per year, in fact the majority of the community areas have good and bad years inspection-wise. For example, **Riverdale** goes from a poor rate in 2014 to a great one in 2015 before falling in 2016 to an even worse rate than in 2014. To explain these observations, we could hypothesize that the **Chicago Department of Public Health (CDPH)** focuses on TODO.
+It is quite hard to target repeating features as the map changes a lot throughout the years. If, of course, the neighbourhoods that we previously identified tend to have a higher/lower pass rate per year, in fact the majority of the community areas have good and bad years inspection-wise. For example, **Riverdale** goes from a poor rate in 2014 to a great one in 2015 before falling in 2016 to an even worse rate than in 2014. To explain these observations, we could hypothesize that, depending on the community area and the year, the **Chicago Department of Public Health (CDPH)** focuses their inspections on facilities with more or less previously failed inspections, which would then have a higher or lower probability of passing the new inspection.
 
 When comparing the years between them, we can notice that at first the food inspections were quite severe. This is revealed by the proportion of yellow/red neighbourhoods from 2010 to 2012. The map becomes much greener for the three subsequent years before getting slightly more red again after 2015. Maybe, there was a bit of change in the CDPH standards that made more establishments fail their food inspections. As for 2018, we could be biased by the fact that we only have data for the first half of the year.
 
@@ -244,11 +244,11 @@ First, let us draw a graph of the inspections and their results over the years t
 
 ![results graph](graphs/results.png)
 
-It seems that the inspections' **PASS** rate is decreasing through time, while the **PASS W/ CONDITIONS** and **FAIL** rates have been slightly increasing the past few years. This could be a clue that inspecting does not actually increase establishments' quality, but we investigated further.
+It seems that the inspections' **pass** rate is decreasing through time, while the **pass with conditions** and **fail** rates have been slightly increasing the past few years. This could be a clue that inspecting does not actually increase establishments' quality, but we investigated further.
 
 First, we compared the percentage for each result in case of re-inspection and the one in case of (first) inspection. Here, we didn't consider special inspection results (out of business, no entry, not located), as they didn't have any reinspection follow-up. Consequently, we didn't consider the re-inspections yielding those specials results either, to remain consistent in our statistics comparison. From this computation we got an increase of 24.4% of the pass rate between inspections and re-inspections along with a decrease of 17.5% of the fail rate. So it appears that in fact inspecting improves quite a lot the quality of the facilities.
 
-Then, we noticed that an important part of the inspections are in fact a **CONSULTATION** requested by the establishment itself. We thought it would also be interesting to see if requesting an inspection also improved your chances of passing it. And indeed, on average, inspections requested by the establishments have a higher success  rate (+9%) as well as a lower failing rate (-4.2%). Indeed, expecting an inspection intuitively increases the success rate because the owner is more likely to be prepared for it.
+Then, we noticed that an important part of the inspections are in fact a **consultation** requested by the establishment itself. We thought it would also be interesting to see if requesting an inspection also improved your chances of passing it. And indeed, on average, inspections requested by the establishments have a higher success  rate (+9%) as well as a lower failing rate (-4.2%). Indeed, expecting an inspection intuitively increases the success rate because the owner is more likely to be prepared for it.
 
 To conclude, it is quite obvious that inspections do have a positive effect on the facilities. After all, it makes sense since these inquiries point out the defects in an establishment's safety, thus allowing the owners to improve it and make sure there is no food risk for the clients coming to their place.
 
