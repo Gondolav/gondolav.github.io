@@ -93,7 +93,7 @@ Fast-foods restaurants are undeniably forming a huge sector of modern catering a
   <img src="/graphs/graph_food_chains.png" width="900px">
 </div>
 
-The chain with the highest fail rate is **Papa John's Pizza**, followed by **Harold's Chicken Shack** and **Flat Top Grill**, which have however a significantly lower number of facilities (31 **Harold's Chicken Shack** and 19 **Flat Top Grill** versus 102 **McDonald's**). **Starbucks** and **Taco Bell** distinguish themselves by being the two chains with the highest pass rates, both around 80%. As for **Freshii**, **Wingstop** and **Domino's Pizza**, they have the highest **PASS W/ CONDITIONS** rate. Hence, their low pass rate shows that some of their establishments could be a bit more careful.
+The chain with the highest fail rate is **Papa John's Pizza**, followed by **Harold's Chicken Shack** and **Flat Top Grill**, which have however a significantly lower number of facilities (31 **Harold's Chicken Shack** and 19 **Flat Top Grill** versus 102 **McDonald's**). **Starbucks** and **Taco Bell** distinguish themselves by being the two chains with the highest pass rates, both around 80%. As for **Freshii**, **Wingstop** and **Domino's Pizza**, they have the highest **pass with conditions** rate. Hence, their low pass rate shows that some of their establishments could be a bit more careful.
 
 Gathering these chains by the type of food they sell, we can notice that pizza restaurants have a higher tendency to fail inspections, whereas sandwich facilities appear to be quite successful in general.
 
@@ -184,7 +184,7 @@ We now focus on the five worst neighbourhoods according to their risk rate, list
 4. **Armour Square**
 5. **Edison Park**
 
-It is quite hard to find common patterns to these five community areas. Geographically, four of them are located in the suburbs of Chicago: **Lincoln Square**,  **Norwood Park** and **Edison Park** are located in the Far North Side, while **East Side** is a Far Southeast Side neighbourhood. As for **Armour Square**, it is a central neighbourhood, the Chicago's *Chinatown*. The ethnicity is also heterogeneous, ranging from Caucasian to Hispanic via Asian communities, except for the African-American population that appears to be a minority. As for the education and income levels, they vary widely from one community area to the other, e.g. from a poor median income of 26,500$ per year in **Armour Square** to a very high 99,200$ per year in **Edison Park**.
+It is quite hard to find common patterns to these five community areas. Geographically, four of them are located in the suburbs of Chicago: **Lincoln Square**,  **Norwood Park** and **Edison Park** are located in the Far North Side, while **East Side** is a Far Southeast Side neighbourhood. As for **Armour Square**, it is a central neighbourhood, the Chicago's *Chinatown*. The ethnicity is also heterogeneous, ranging from Caucasian to Hispanic communities, except for the African-American population that appears to be a minority. As for the education and income levels, they vary widely from one community area to the other, e.g. from a poor median income of 26,500$ per year in **Armour Square** to a very high 99,200$ per year in **Edison Park**.
 
 Hence, according to our findings, a Chicago neighbourhood's bad risk rate doesn't seem to be related to its location, its ethnicity, its education level or its income level.
 
@@ -243,15 +243,13 @@ Consequently, the predisposition of a neighbourhood to have a good **pass** rate
   <iframe src="maps/result_per_year_map.html" scrolling="no" frameborder="0" width="80%" height="600px"></iframe>
 </div>
 
-It is quite hard to target repeating features as the map changes a lot throughout the years. If, of course, the neighbourhoods that we previously identified tend to have a higher/lower pass rate per year, in fact the majority of the community areas have good and bad years inspection-wise. For example, **Riverdale** goes from a poor rate in 2014 to a great one in 2015 before falling in 2016 to an even worse rate than in 2014. To explain these observations, we could hypothesize that, depending on the community area and the year, the **Chicago Department of Public Health (CDPH)** focuses their inspections on facilities with more or less previously failed inspections, which would then have a higher or lower probability of passing the new inspection.
+It is quite hard to target repeating features as the map changes a lot throughout the years. Even though the neighbourhoods that we previously identified tend to have a higher/lower pass rate per year, in fact the majority of the community areas have good and bad years inspection-wise. For example, **Riverdale** goes from a poor rate in 2014 to a great one in 2015 before falling in 2016 to an even worse rate than in 2014. To explain these observations, we could hypothesize that, depending on the community area and the year, the **Chicago Department of Public Health (CDPH)** focuses their inspections on facilities with more or less previously failed inspections, which would then have a higher or lower probability of passing the new inspection.
 
 When comparing the years between them, we can notice that at first the food inspections were quite severe. This is revealed by the proportion of yellow/red neighbourhoods from 2010 to 2012. The map becomes much greener for the three subsequent years before getting slightly more red again after 2015. Maybe, there was a bit of change in the CDPH standards that made more establishments fail their food inspections. As for 2018, we could be biased by the fact that we only have data for the first half of the year.
 
 ### Inequalities unveiled
 
 As a general conclusion for this analysis, we can affirm that facilities which fail their inspections appear to be concentrated in poor neighbourhoods, mainly inhabited by African-American people. We can make a link here with a larger problem in Chicago: the [legacy of segregation](https://www.theatlantic.com/business/archive/2018/03/chicago-segregation-poverty/556649/?fbclid=IwAR2BkpgrKDsfh1mc-oAMug5Hd6fOuPBIjLxtH0wEj4xxZhalmpM0ZAYBcRk). Indeed, the majority of the money generated by the city of Chicago is invested in the wealthiest neighbourhoods, especially in the **Loop**, the central business district. It would be a good idea for the city hall to focus on those left-aside community areas and improve the quality of the food establishments there.
-
-As a starting point, more hospitals and schools could be opened in the most deprived neighbourhoods to give a better access to education and healthcare to the underprivileged, who would need both of them to find proper jobs and have enough money for living. 
 
 ## Inspection effects on establishments
 
