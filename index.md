@@ -14,9 +14,16 @@ article_header:
   background_color: '#203028'
   background_image:
     gradient: 'linear-gradient(135deg, rgba(252, 159, 91, .4), rgba(103, 164, 211, .4))'
-    src: /chicago-skyline4.jpg
+    src: /images/chicago-skyline4.jpg
 ---
 <!--more-->
+
+<!--<style>
+div {
+  text-align: justify;
+  text-justify: inter-word;
+}
+</style>-->
 
 # The Setting
 
@@ -46,39 +53,62 @@ We have built small tables with the different features we found interesting on t
 
 ## Facility types and their predisposition to failure
 
-TODO
+Food inspection concerns a very large variety of catering-related services. Let's see if and how the facility types and inspection results are tied to one another. As one would expect, the distribution of these facilities is extremely uneven: restaurants are by far the most represented type in Chicago counting 18,073 distinct establishments, which corresponds to 60% of the city's facilities. It is followed by grocery stores with 5'792 instances (20%) and by schools with a total of 1'125 facilities (4%). Let's now take a look at the average fail rate per facility type:
+
+<div style="text-align:center;">
+  <img src="/images/graph_facility_types.png" width="900px">
+</div>
+
+It appears that three facility types in particular have a higher failure rate than the rest:
+   - the liquor stores
+   - the wholesale distributors
+   - the taverns and bars
+
+A way of interpreting this would be to notice that when the main sold item is alcohol, less care is taken in making the facilities clean and safe. As for wholesale distributors, their size and the fact that they are mostly used by companies rather than individuals could explain a lack of neatness. Moreover, for taverns it could be harder to keep it as clean as other establishments because of the behavior of drunk clients.
+
+TODO: Discuss low fail rates
 
 ## Fast-food restaurant chains
 
-Fast-foods restaurants are undeniably forming a huge sector of modern catering and are well-known to the average consumer. Conducting a study about the popular chains located in Chicago is a good way to reveal insights about food quality in these establishments and find out how they compare to one another. We selected the chains that had the largest number of open restaurants in the city in order to have stable and accurate data.
+Fast-foods restaurants are undeniably forming a huge sector of modern catering and are well-known to the average consumer. Conducting a study about the popular chains located in Chicago is a good way to reveal insights about food quality in these establishments and find out how they compare to one another. We selected the chains that had the largest number of open restaurants in the city in order to have stable and accurate data. Let's take a look at their inspection result distribution:
 
-The chain with the highest fail rate is **Papa John's Pizza**, followed by **Harold's Chicken Shack** and **Flat Top Grill**, which has however a significantly lower number of facilities (31 **Harold's Chicken Shack** and 19 **Flat Top Grill** versus 102 **McDonald's**). **Starbucks** and **Taco Bell** distinguish themselves by being the two chains with the highest pass rates, around 80%! As for **Freeshi**, **Wingstop** and **Domino's Pizza**, they have the highest "pass with conditions" rate. Hence their low pass rate shows rather that some of the establishments could be a bit more careful than a truly dirty fast-food restaurant chain.
+<div style="text-align:center;">
+  <img src="/images/graph_food_chains.png" width="900px">
+</div>
+
+The chain with the highest fail rate is **Papa John's Pizza**, followed by **Harold's Chicken Shack** and **Flat Top Grill**, which has however a significantly lower number of facilities (31 **Harold's Chicken Shack** and 19 **Flat Top Grill** versus 102 **McDonald's**). **Starbucks** and **Taco Bell** distinguish themselves by being the two chains with the highest pass rates, both around 80%. As for **Freshii**, **Wingstop** and **Domino's Pizza**, they have the highest **PASS W/ CONDITIONS** rate. Hence their low pass rate shows rather that some of the establishments could be a bit more careful than a truly dirty fast-food restaurant chain.
 
 Gathering these chains by the type of food they sell, we can notice that pizza restaurants have a higher tendency to fail inspections, whereas sandwich facilities appear to be quite successful in general.
 
 We may have to be careful with those results: the huge gap (302 **Subway**'s versus only 18 **Papa John's Pizza**'s) between the number of facilities could make the comparison biased. Indeed, we can see that the three chains with more than 100 restaurants in Chicago (namely **Subway**, **Dunkin Donuts** and **McDonald's**) all are middle-ranked in terms of pass rate, probably because they benefit/suffer from having a lot of facilities in Chicago.
 
-Overall, we observe a mean fail rate of 18.4% for fast-food chains in Chicago city, whereas classical restaurants average to 21.4%. This significant difference indicates that, surprisingly, fast-food facilities tend to have a cleaner cooking and serving environment. It can be explained by the fact that these restaurants are part of big corporate groups and therefore have well-defined and strict hygiene rules.
+Overall, we observe a mean fail rate of 18.4% for fast-food chains in Chicago city, whereas classical restaurants average to 21.4%. This significant difference indicates that, surprisingly, fast-food facilities tend to have a cleaner cooking and serving environment. It can be explained by the fact that these restaurants are part of big corporate groups and have therefore strict and well-defined hygiene rules.
+
+TODO: fail rate/income analysis ?
 
 ## Risk Analysis Per Neighbourhood
 
-One of the features we could use to perform an analysis of these food inspections is the **Risk** associated with each inspection. By risk here we mean the possibility of "adversely affecting the public's health". It can take 3 different values: **RISK 1 (HIGH)**, **RISK 2 (MEDIUM)** and **RISK 3 (LOW)**. We chose to judge the neighbourhoods by their percentage of high risk food facilities as it appeared to be an accurate measure we could get from this feature. Indeed, such a test would probably tell us something about the safest places in Chicago food-wise.
+One of the features we could use to perform an analysis of these food inspections is the **Risk** associated with each inspection. By risk here we mean the possibility of "adversely affecting the public's health". It can take 3 different values: **RISK 1 (HIGH)**, **RISK 2 (MEDIUM)** and **RISK 3 (LOW)**. Indeed, the estabooshments which are judged more risky will be more inspected than others. We chose to judge the neighbourhoods by their percentage of high risk food facilities as it appeared to be an accurate measure we could get from this feature. Indeed, such a test would probably tell us something about the safest places in Chicago food-wise.
 We built the following map, which colours each community area according to its **RISK 1 (HIGH)** rate.
 
-<iframe src="maps/risk_map.html" width="50%" height="600px"></iframe>
+
+
+<div style="text-align:center;">
+  <iframe src="maps/risk_map.html" width="80%" height="600px"></iframe>
+</div>
 
 The areas with the most important **RISK 1 (HIGH)** rate are mostly located in the Central, Far North, Northwest and North sides of Chicago. This is rather surprising since these parts of the city are mostly populated with middle-class and well-off populations. On the other hand, the Southwest and South sides of Chicago tend to have a lower risk rate, i.e. in districts with a much lower median income.
 
 Let us now go deeper in our interpretation thanks to the [Chicago Metropolitan Agency for Planning website](https://www.cmap.illinois.gov/data/community-snapshots), as mentioned above.
 
 Here is the name of the five community areas with the lowest high risk rate:
-1. **West Garfield Park**
-2. **West Englewood**
-3. **East Garfield Park**
-4. **Englewood**
-5. **Bridgeport**
+1. **Garfield Park**
+2. **Englewood**
+3. **Bridgeport**
+4. **Grand Crossing**
+5. **New City**
 
-Obviously, **Englewood** and **West Englewood** as well as **East Garfield Park** and **West Garfield Park** are neighbour community areas. In general, these neighbourhoods present similar ethnicity, education level and income level. Moreover, all these 3 indicators have very low values overall: with the exception of **Bridgeport**, in these neighbourhoods 75% of the population earns less than 50'000$ a year and less than 20% of the inhabitants have a university degree. Here, **Bridgeport** looks more like an outlier with its different ethnicity and its median income, and its higher education level being as twice as high as the others.
+As expected, most of them are located in the Southwest Side, except for **Garfield Park** which can be found in the middle of the West Side of Chicago. In general, these neighbourhoods present similar ethnicity, education level and income level. Unfortunately, these indicators are low: with the exception of **Bridgeport**, in these neighbourhoods 70% of the population earns less than 50'000$ a year and less than 25% of the inhabitants have a university degree. Here, **Bridgeport** looks more like an outlier with its different ethnicity, its important median income and its higher education level being as twice as high as the others.
 
 Consequently, from these results, a good risk rate seems very surprisingly to be linked to the (lack of) wealth and education of a community area.
 
@@ -93,13 +123,15 @@ It is quite hard to find common patterns to these five community areas. Geograph
 
 Hence, a bad risk rate of a Chicago neighbourhood doesn't seem to be related to its location, its ethnicity, its education level or its income level.
 
-\* need to conclude \*
+To conclude, we can say that this *a priori* feature which is the risk doesn't really seem to be related to the location of the facility. The only apparent correlation is that poorer neighbourhoods seem to have less risky facilities on average than the others. We can view this as a good point as it could mean that the city doesn't rely on education or income level of the neighbourhood  of a given establishment to determine its risk. On the other hand, these results could also be seen as a lack of consideration for these left-aside areas whereas they would definitely need more attention from the municipality. Let us perform a result analysis to unravel these questions.
 
 ## Result Analysis Per Neighbourhood
 
 Another very interesting feature present in those inspections is obviously the **Result** of the inspection. We decided to focus on the three main possible results: **PASS**, **PASS W/ CONDITIONS** and **FAIL**. Gathering the two first possibilities into a global pass, this provided us with a pass and a fail rates summing up to 1. We can now portray the community areas by their percentage of successful inspections and get the following map:
 
-<iframe src="maps/result_map.html" width="50%" height="600px"></iframe>
+<div style="text-align:center;">
+  <iframe src="maps/result_map.html" width="80%" height="600px"></iframe>
+</div>
 
 The central district **Loop** as well as the edge areas of the city share the highest rates when regarding the pass inspections. They are wealthy neighbourhoods, which could explain why a peculiar care seems to be taken in making food facilities safe. We clearly cannot say the same about the South Side of Chicago, which gathers the Community Areas with highest **FAIL** rates.
 
@@ -113,7 +145,7 @@ We start with the top five community areas with respect to their pass rate:
 5. **Loop**
 
 **O'Hare** is the large community area at the extreme northwest of Chicago, while **Clearing**, **Ashburn** and **Mount Greenwood** are southwest neighbourhoods. On the other hand, **Loop** is the very heart of the city.
-These 5 community areas have quite diverse populations in terms of ethnicity, education level and income level. Nevertheless, we can notice that at least 25% of their population has a university degree and that they all have a median income of 50'000$ per year or more, two high statistics. In particular, **Loop**, the central business district in the downtown area of the city and home to Chicago's commercial core, has a huge university degree rate (83%) and median income (100'000 \$ per year).
+These five community areas have quite diverse populations in terms of ethnicity, education level and income level. Nevertheless, we can notice that at least 25% of their population has a university degree and that they all have a median income of 50'000$ per year or more, two high statistics. In particular, **Loop**, the central business district in the downtown area of the city and home to Chicago's commercial core, has a huge university degree rate (83%) and median income (100'000 \$ per year).
 
 Overall, given these results, we could hypothesize that high pass rates are related to prosperous neighbourhoods.
 
@@ -128,7 +160,7 @@ The first two things to notice are that the ethnicity of these community areas i
 
 The conclusion to draw here is rather clear: a low pass rate seems to be closely related to the (lack of) wealth and education of a Community Area. In particular, districts with an African-American population appear to be more struck by food safety issues. Besides, the fact that they all are neighbours seems to point out a large area of the city with safety issues regarding the food facilities.
 
-Consequently, the inclination of a neighbourhood to have a good ** PASS** rate appears to be somehow linked to its prosperity. It would then be safer to look for a restaurant or a groceries store in the wealth community areas of Chicago, namely the Central, Far North, Southwest and Far Southwest Sides of Chicago. We could see this as logical since facilities in richer areas may have more funds to make their place conform to all the safety norms. We could also consider it as some kind of injustice since the poorer are once again disadvantaged with more precarious establishments.
+Consequently, the inclination of a neighbourhood to have a good **PASS** rate appears to be somehow linked to its prosperity. It would then be safer to look for a restaurant or a groceries store in the wealth community areas of Chicago, namely the Central, Far North, Southwest and Far Southwest Sides of Chicago. We could see this as logical since facilities in richer areas may have more funds to make their place conform to all the safety norms. We could also consider it as some kind of injustice since the poorer are once again disadvantaged with more precarious establishments.
 
 ## Evolution of the Pass Rate Over Time
 
