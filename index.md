@@ -30,8 +30,6 @@ div {
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
-<link rel="stylesheet" type="text/css" href="bar_plot_style.css">
-
 # The setting
 
 **Chicago** is the third most populous and the second most visited city in the United States. It is an international hub for finance, culture, commerce, industry, education, technology, telecommunications and transportation. The Chicago area [has one of the highest gross domestic product (GDP) in the world](https://www.bea.gov/system/files/2018-09/gdp_metro0918_0.pdf) and the [most balanced economy in the U.S.](http://www.worldbusinesschicago.com/economy), due to its high level of diversification. Moreover, the *Windy City* ranks first globally in the [2018 Time Out City Life Index](https://www.timeout.com/chicago/news/chicago-named-the-worlds-best-city-for-having-it-all-012918), a quality of life survey, and seventh for the highest number of [ultra-high-net-worth residents](https://www.chicagobusiness.com/finance-banking/these-are-cities-most-ultra-rich-people): roughly 3,300 residents are worth more than $30 million. Nevertheless, Chicago is also a city of contradictions and inequalities: according to the 2008-2012 U.S. Census Bureau's American Community Survey, about 18.3% of families and 22.1% of the population lived below the poverty line.
@@ -63,7 +61,7 @@ We use the [Chicago Metropolitan Agency for Planning website](https://www.cmap.i
 Food inspection concerns a very large variety of catering-related services. Let's see if and how the facility types and inspection results are tied to one another. As one would expect, the distribution of these facilities is extremely uneven: restaurants are by far the most represented type in Chicago counting 18,073 distinct establishments, which corresponds to 60% of the city's facilities. It is followed by grocery stores with 5,792 instances (20%) and by schools with a total of 1,125 facilities (4%). Let's now take a look at the **average fail rate per facility type**:
 
 <figure class="highcharts-figure">
-    <div id="container"></div>
+    <div id="graph_facility_types"></div>
     <script src="js/graph_facility_types.js"></script>
 </figure>
 
@@ -79,8 +77,8 @@ On the other hand, it is reassuring to observe that the most frequent establishm
 Overall it is difficult to extract any really meaningful generalization but it seems that the fail rate follows a rather intuitive behaviour since the facilities that are the most critical for public health are well regulated and the ones that have more recreative purposes are not as strict regarding food safety. Actually, each establishment has an associated risk factor reported in the inspections. We can assess the validity of the previously proposed explanation by analysing the risk distribution of the main facility types:
 
 <figure class="highcharts-figure">
-    <div id="container"></div>
-    <script src="js/graph_facility_types.js"></script>
+    <div id="graph_risk_facility_types"></div>
+    <script src="js/graph_risk_facility_types.js"></script>
 </figure>
 
 The food safety seems indeed correlated to the risk assessed by the inspectors. We can see that the most sensitive facilities are the one taking care of children, elders or hospital patients, and that they indeed have a low fail rate as concluded earlier. Furthermore, the establishments with the highest fail rate are mainly marked as not risky, which fits the previous observations.
@@ -89,9 +87,10 @@ The food safety seems indeed correlated to the risk assessed by the inspectors. 
 
 Fast-foods restaurants are undeniably forming a huge sector of modern catering and are well-known to the average consumer. Conducting a study about the popular chains located in Chicago is a good way to reveal insights about food quality in these establishments and find out how they compare to one another. We selected the chains that had the largest number of open restaurants in the city in order to have stable and accurate data. Let's take a look at their inspection result distribution:
 
-<div style="text-align:center;">
-  <img src="/graphs/graph_food_chains.png" width="900px">
-</div>
+<figure class="highcharts-figure">
+    <div id="graph_food_chains"></div>
+    <script src="js/graph_food_chains.js"></script>
+</figure>
 
 The chain with the highest fail rate is **Papa John's Pizza**, followed by **Harold's Chicken Shack** and **Flat Top Grill**, which have however a significantly lower number of facilities (31 **Harold's Chicken Shack** and 19 **Flat Top Grill** versus 102 **McDonald's**). **Starbucks** and **Taco Bell** distinguish themselves by being the two chains with the highest pass rates, both around 80%. As for **Freshii**, **Wingstop** and **Domino's Pizza**, they have the highest **pass with conditions** rate. Hence, their low pass rate shows that some of their establishments could be a bit more careful.
 
@@ -105,22 +104,22 @@ TODO: add another analysis ?
 
 ## Violation analysis
 
-We were provided with the comments related to each inspection. Although it would have been very difficult to perform an analysis over the comments themselves, these comments are fortunately classified into forty-six violation categories, which could be interpreted as the set of rules to follow to obtain a facility as safe as possible. Consequently, these rules appear in the comments when they are broken. That is what we will be focusing on in this section.
+We were provided with the comments related to each inspection. Although it would have been very difficult to perform an analysis over the comments themselves, these comments are fortunately classified into forty-six violation categories, which could be interpreted as the set of rules to follow to obtain a facility as safe as possible. Consequently, these rules appear in the comments when they are violated. That is what we will be focusing on in this section.
 
 ### Violation frequency
 
-To start simple, we simply extracted the most frequent violations to see if any scheme appeared. The most encountered ones are the following:
+To start simple, we extracted the most frequent violations to see if any scheme appeared. The most encountered ones are the following:
 1. **34. Floors: constructed per code, cleaned, good repair, coving installed, dust-less cleaning methods used**
 2. **35. Walls, ceilings, attached equipment constructed per code: good repair, surfaces clean and dust-less cleaning methods**
 3. **33. Food and non-food contact equipment utensils clean, free of abrasive detergents**
 4. **32. Food and non-food contact surfaces properly designed, constructed and maintained**
 5. **38. Ventilation: rooms and equipment vented as required: plumbing: installed and maintained**
 
-These categories are indeed significant since they represent almost 60% of the met violations throughout all the inspections. It appears that the most difficult thing for the Chicago facilities is usually to keep their cooking and serving space (floors, ventilation, walls and ceilings) as well as their utensils clean and in good condition. We could remark that this task is probably one of the most difficult when we are dealing with food as it is a continuous job to make sure everything works well. Moreover, if we regard restaurants, cooks manipulate ingredients all day so it is not surprising to see their working spaces get dirty.
+These categories are indeed significant since they represent almost 60% of the met violations throughout all the inspections. It appears that the most difficult thing for the Chicago facilities is usually to keep their cooking and serving space (floors, ventilation, walls and ceilings) as well as their utensils clean and in good condition. We could remark that this task is probably one of the most difficult when we are dealing with food as it is a continuous job to make sure everything works well. Moreover, if we regard restaurants, cooks manipulate ingredients all day so it is not surprising to see their working spaces getting dirty more easily.
 
 ### Violations and failed inspections
 
-Nevertheless and unless there was an important accumulation of dirty or out-of-order equipment, these violations appear to be rather irrelevant in the sense that it would probably not cause the establishment's failure to the inspection. Let us verify this statement by visualizing the occurrence frequency of each category in case of a failed inspection and compute the difference with the previous results.
+Nevertheless, these violations appear to be rather irrelevant in the sense that it would probably not cause the establishment's failure to the inspection. Let us verify this statement by visualizing the occurrence frequency of each category in case of a failed inspection and compute the difference with the previous results.
 
 The violation categories with the highest such frequency difference are listed here:
 1. **18. No evidence of rodent or insect outer openings protected/rodent proofed, a written log shall be maintained available to the inspectors**
@@ -130,8 +129,8 @@ The violation categories with the highest such frequency difference are listed h
 5. **24. Dish washing facilities: properly designed, constructed, maintained, installed, located and operated**
 
 Violation number **18** is clearly one of the most involved issues in an establishment's failure, with a presence in the comments of a failed inspection 5.8% higher than when considering all the inspections. We can then deduce that the presence of rodents or insects is a serious misconduct and highly increases the inspection's failure probability.
-Even though the difference are less significant (about 1%), we may also observe that rules related directly to food such as food protection, dishes neatness or garbage organisation appear more often in the inspections' comments in case of failure. This makes sense since the primary role of the inspections is to make sure the food in this facility is safe to eat and is correctly dealt with at every step.
-Finally, it is not surprising to see violation number **29** in the ranking as it is linked to the observance of the law [7-42-090](http://chicago-il.elaws.us/code/coor_t7_ch7-42_sec7-42-090) which among other things penalizes the non-correction of a violation upon re-inspection.
+Even though the differences are less significant (about 1%), we may also observe that rules related directly to food such as food protection, dishes neatness or garbage organisation appear more often in the inspections' comments in case of failure. This makes sense since the primary role of the inspections is to make sure the food in this facility is safe to eat and is correctly dealt with at every step.
+Finally, it is not surprising to see violation number **29** in the ranking as it is linked to the observance of the law [7-42-090](http://chicago-il.elaws.us/code/coor_t7_ch7-42_sec7-42-090) which, among other things, penalizes the non-correction of a violation upon re-inspection.
 
 ### Violations and complaint-provoked inspections
 
@@ -142,16 +141,16 @@ There are various types of inspections, one of them being **complaint** for insp
 3. **29. Previous minor violation(s) corrected 7-42-090**
 4. **6. Hands washed and cleaned, good hygienic practices; no bare hand contact with ready-to-eat foods.**
 
-Overall the frequency difference is not really meaningful (at most 1.3%) so there appears to be no link between complaint-based inspections and violations. Nevertheless, we can still notice that clients tend to complain more about violations number **3**, **18** and **6**, probably because this aspect is more visible to them.
+Overall, the frequency difference is not really meaningful (at most 1.3%) so there appears to be no link between complaint-based inspections and violations. Nevertheless, we can still notice that clients tend to complain more about violations number **3**, **18** and **6**, probably because this aspect is more visible to them.
 
 ### Violations and neighbourhoods
 
-To conclude with this analysis, we extract the most encountered violation category in each neighbourhood. Violation number **54** clearly wins here as it is the most met category in 54 out of 77 community areas.
+To conclude with this analysis, we extract the most encountered violation category in each neighbourhood. [Violation number 34](/#violation-frequency) clearly wins here as it is the most met category in 54 out of 77 community areas.
 A violation analysis over the neighbourhoods is then not very insightful to get to know more about which parts of the city are the safest food-wise. This is the question we will address in the next parts.
 
 ## Risk analysis per neighbourhood
 
-One of the features we could use to perform an analysis of the food inspections is the **Risk** associated with each inspection. By risk, here we mean the possibility of *adversely affecting the public's health*. It can take 3 different values: **high**, **medium** and **low**. Indeed, the establishments which are judged more risky will be more inspected than others, and we found out earlier that it was closely related to the facility type. We chose to judge the neighbourhoods by their percentage of high risk food facilities as it appeared to be an accurate measure we could get from this feature. Indeed, such a test would probably tell us something about the safest places in Chicago food-wise.
+One of the features we could use to perform an analysis of the food inspections is the **risk** associated with each inspection. By risk, here we mean the possibility of *adversely affecting the public's health*. It can take 3 different values: **high**, **medium** and **low**. Indeed, the establishments which are judged more risky will be more inspected than others, and we found out earlier that it was closely related to the facility type. We chose to judge the neighbourhoods by their percentage of high risk food facilities as it appeared to be an accurate measure we could get from this feature. Indeed, such a test would probably tell us something about the safest places in Chicago food-wise.
 We built the following map, which colours each community area according to its **high** risk rate.
 
 <div style="text-align:center;">
@@ -196,7 +195,7 @@ We also noticed earlier that a lower risk meant an higher fail rate. We will ver
 
 ## Result analysis per neighbourhood
 
-Another very interesting feature present in the inspections is obviously the **Result** of the inspection. We decided to focus on the three main possible results: **pass**, **pass with conditions** and **fail**. Gathering the two first possibilities into a global pass, this provided us with a pass and a fail rates summing up to 1. We can now portray the community areas by their percentage of successful inspections and get the following map:
+Another very interesting feature present in the inspections is obviously the **result** of the inspection. We decided to focus on the three main possible results: **pass**, **pass with conditions** and **fail**. Gathering the two first possibilities into a global pass, this provided us with a pass and a fail rates summing up to 1. We can now portray the community areas by their percentage of successful inspections and get the following map:
 
 <div style="text-align:center;">
   <iframe src="maps/result_map.html" frameborder="0" width="80%" height="600px"></iframe>
@@ -251,9 +250,11 @@ When comparing the years between them, we can notice that at first the food insp
 
 As a general conclusion for this analysis, we can affirm that facilities which fail their inspections appear to be concentrated in poor neighbourhoods, mainly inhabited by African-American people. We can make a link here with a larger problem in Chicago: the [legacy of segregation](https://www.theatlantic.com/business/archive/2018/03/chicago-segregation-poverty/556649/?fbclid=IwAR2BkpgrKDsfh1mc-oAMug5Hd6fOuPBIjLxtH0wEj4xxZhalmpM0ZAYBcRk). Indeed, the majority of the money generated by the city of Chicago is invested in the wealthiest neighbourhoods, especially in the **Loop**, the central business district. It would be a good idea for the city hall to focus on those left-aside community areas and improve the quality of the food establishments there.
 
+As a starting point, more hospitals and schools could be opened in the most deprived neighbourhoods to give a better access to education and healthcare to the underprivileged, who would need both of them to find proper jobs and have enough money for living.
+
 ## Inspection effects on establishments
 
-The very first idea that came to our head is to check if inspections were efficient, i.e. if they truly had an impact on the quality and safety of the food facilities. That is the main question we will intent to answer in this part.
+The very first idea that came to our head is to check if inspections were useful, i.e. if they truly had an impact on the quality and safety of the food facilities. That is the main question we intend to answer in this part.
 
 First, let us draw a graph of the inspections and their results over the years to see if there is any evolution:
 
@@ -261,16 +262,22 @@ First, let us draw a graph of the inspections and their results over the years t
 
 It seems that the inspections' **pass** rate is decreasing through time, while the **pass with conditions** and **fail** rates have been slightly increasing the past few years. This could be a clue that inspecting does not actually increase establishments' quality, but we investigated further.
 
-First, we compared the percentage for each result in case of re-inspection and the one in case of (first) inspection. Here, we didn't consider special inspection results (out of business, no entry, not located), as they didn't have any reinspection follow-up. Consequently, we didn't consider the re-inspections yielding those specials results either, to remain consistent in our statistics comparison. From this computation we got an increase of 24.4% of the pass rate between inspections and re-inspections along with a decrease of 17.5% of the fail rate. So it appears that in fact inspecting improves quite a lot the quality of the facilities.
+First, we compared the percentage for each result in case of re-inspection and the one in case of (first) inspection. Here, we didn't consider special inspection results (out of business, no entry, not located), as they didn't have any reinspection follow-up. Consequently, we didn't consider the re-inspections yielding those specials results either, to remain consistent in our statistics comparison. From this computation, **we got an increase of 24.4% of the pass rate between inspections and re-inspections** along with a decrease of 17.5% of the fail rate. So it appears that in fact inspecting improves quite a lot the quality of the facilities.
 
-Then, we noticed that an important part of the inspections are in fact a **consultation** requested by the establishment itself. We thought it would also be interesting to see if requesting an inspection also improved your chances of passing it. And indeed, on average, inspections requested by the establishments have a higher success  rate (+9%) as well as a lower failing rate (-4.2%). Indeed, expecting an inspection intuitively increases the success rate because the owner is more likely to be prepared for it.
+Then, we noticed that an important part of the inspections are in fact a **consultation** requested by the establishment itself. We thought it would also be interesting to see if requesting an inspection also improved the chances of passing it. And indeed, on average, **inspections requested by the establishments have a higher success  rate (+9%) as well as a lower failing rate (-4.2%)**. Indeed, expecting an inspection intuitively increases the success rate because the owner is more likely to be prepared for it.
 
 To conclude, it is quite obvious that inspections do have a positive effect on the facilities. After all, it makes sense since these inquiries point out the defects in an establishment's safety, thus allowing the owners to improve it and make sure there is no food risk for the clients coming to their place.
 
-/* Quick insights on evolution of inspections over the years but don't know how to integrate them into the rest of it /*
+### Bonus: inspections' evolution throughout time
+
+!TODO PLOT IN A YEAR!
 
 We also took a look at the evolution of the inspections throughout a calendar year. We noticed that during summer and winter holidays the number of inspections drops heavily.
-Plotting the number of inspections per year from 2010 to 2018 told us quite a lot of things as well. First of all, the number of inspections has significantly increased from 2010 to 2016, passing from 17000 to more than 22000 inspections per year. We remarked a small drop between 2016 and 2017. Furthermore, year 2018 is incomplete as it only takes into account the inspections up to July 1st, so we theoretically only have half the inspections for 2018 in our dataset. Following this assumption though, there should also be a drop between 2017 and 2018 as there has been less than 10000 inspections so far.
+Plotting the number of inspections per year from 2010 to 2018 told us quite a lot of things as well.
+
+!TODO PLOT OVER ALL YEARS!
+
+First of all, the number of inspections has significantly increased from 2010 to 2016, passing from 17,000 to more than 22,000 inspections per year. We remarked a small drop between 2016 and 2017. Furthermore, year 2018 is incomplete as it only takes into account the inspections up to July 1st, so we theoretically only have half the inspections for 2018 in our dataset. Following this assumption though, there should also be a drop between 2017 and 2018 as there has been less than 10,000 inspections so far.
 
 
 # What have we learned?
