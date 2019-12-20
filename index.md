@@ -152,7 +152,7 @@ We built the following map, which colours each community area according to its *
   <iframe src="maps/risk_map.html" frameborder="0" width="80%" height="600px"></iframe>
 </div>
 
-The areas with the most important **high** risk rate are mostly located in the Central, Far North, Northwest and North sides of Chicago. This is rather surprising since these parts of the city are mostly populated with middle-class and well-off populations. On the other hand, the Southwest and South sides of Chicago tend to have a lower risk rate, despite the fact that they are comprised of districts with a much lower median income.
+The areas with the most important **high** risk rate are mostly located in the Central, Far North, Northwest and North sides of Chicago, mostly populated with middle-class and well-off populations. On the other hand, the Southwest and South sides of Chicago tend to have a lower risk rate, despite the fact that they are comprised of districts with a much lower median income.
 
 Let us now go deeper in our interpretation thanks to the [Chicago Metropolitan Agency for Planning website](https://www.cmap.illinois.gov/data/community-snapshots), as mentioned above.
 
@@ -167,7 +167,7 @@ Here is the name of the five community areas with the lowest **high** risk rate:
 
 As expected, most of them are located in the Southwest Side, except for **Garfield Park** which can be found in the middle of the West Side of Chicago, mainly inhabited by African American populations. In general, these neighbourhoods present similar education level and income level. Unfortunately, these indicators are low: with the exception of **Bridgeport**, in these community areas 70% of the population earns less than 50,000$ a year and less than 25% of the inhabitants have a university degree. Here, **Bridgeport** looks more like an outlier with its different ethnicity, its higher median income and its education level being as twice as high as the others.
 
-Consequently, from these results, a good risk rate seems very surprisingly to be linked to the (lack of) wealth and education of a community area.
+Consequently, from these results, a good risk rate seems to be linked to the (lack of) wealth and education of a community area.
 
 ### The worst neighbourhoods, risk-wise
 
