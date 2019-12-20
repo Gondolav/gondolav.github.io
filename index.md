@@ -91,7 +91,7 @@ Fast-foods restaurants are undeniably forming a huge sector of modern catering a
     <script src="js/graph_food_chains.js"></script>
 </figure>
 
-The chain with the highest fail rate is **Papa John's Pizza**, followed by **Harold's Chicken Shack** and **Flat Top Grill**, which have however a significantly lower number of facilities (31 **Harold's Chicken Shack** and 19 **Flat Top Grill** versus 102 **McDonald's**). **Starbucks** and **Taco Bell** distinguish themselves by being the two chains with the highest pass rates, both around 80%. As for **Freshii**, **Wingstop** and **Domino's Pizza**, they have the highest **PASS W/ CONDITIONS** rate. Hence, their low pass rate shows that some of their establishments could be a bit more careful.
+The chain with the highest fail rate is **Papa John's Pizza**, followed by **Harold's Chicken Shack** and **Flat Top Grill**, which have however a significantly lower number of facilities (31 **Harold's Chicken Shack** and 19 **Flat Top Grill** versus 102 **McDonald's**). **Starbucks** and **Taco Bell** distinguish themselves by being the two chains with the highest pass rates, both around 80%. As for **Freshii**, **Wingstop** and **Domino's Pizza**, they have the highest **pass with conditions** rate. Hence, their low pass rate shows that some of their establishments could be a bit more careful.
 
 Gathering these chains by the type of food they sell, we can notice that pizza restaurants have a higher tendency to fail inspections, whereas sandwich facilities appear to be quite successful in general.
 
@@ -99,11 +99,11 @@ We may have to be careful with those results: the huge gap (302 **Subway**'s ver
 
 Overall, we observe a mean fail rate of 18.4% for fast-food chains in Chicago city, whereas classical restaurants average to 21.4%. This significant difference indicates that, surprisingly, fast-food facilities tend to have a cleaner cooking and serving environment. It can be explained by the fact that these restaurants are part of big corporate groups and have therefore strict and well-defined hygiene rules.
 
-# III. Violation analysis
+# III. Violation analysis TODO CHANGE
 
 We were provided with the comments related to each inspection. Although it would have been very difficult to perform an analysis over the comments themselves, these comments are fortunately classified into forty-six violation categories, which could be interpreted as the set of rules to follow to obtain a facility as safe as possible. Consequently, these rules appear in the comments when they are violated. That is what we will be focusing on in this section.
 
-## Violation frequency
+## Violation frequency TODO CHANGE
 
 To start simple, we extracted the most frequent violations to see if any scheme appeared. The most encountered ones are the following:
 1. **34. Floors: constructed per code, cleaned, good repair, coving installed, dust-less cleaning methods used**
@@ -180,7 +180,7 @@ We now focus on the five worst neighbourhoods according to their risk rate, list
 4. **Armour Square**
 5. **Edison Park**
 
-It is quite hard to find common patterns to these five community areas. Geographically, four of them are located in the suburbs of Chicago: **Lincoln Square**,  **Norwood Park** and **Edison Park** are located in the Far North Side, while **East Side** is a Far Southeast Side neighbourhood. As for **Armour Square**, it is a central neighbourhood, the Chicago's *Chinatown*. The ethnicity is also heterogeneous, ranging from Caucasian to Hispanic via Asian communities, except for the African-American population that appears to be a minority. As for the education and income levels, they vary widely from one community area to the other, e.g. from a poor median income of 26,500$ per year in **Armour Square** to a very high 99,200$ per year in **Edison Park**.
+It is quite hard to find common patterns to these five community areas. Geographically, four of them are located in the suburbs of Chicago: **Lincoln Square**,  **Norwood Park** and **Edison Park** are located in the Far North Side, while **East Side** is a Far Southeast Side neighbourhood. As for **Armour Square**, it is a central neighbourhood, the Chicago's *Chinatown*. The ethnicity is also heterogeneous, ranging from Caucasian to Hispanic communities, except for the African-American population that appears to be a minority. As for the education and income levels, they vary widely from one community area to the other, e.g. from a poor median income of 26,500$ per year in **Armour Square** to a very high 99,200$ per year in **Edison Park**.
 
 Hence, according to our findings, a Chicago neighbourhood's bad risk rate doesn't seem to be related to its location, its ethnicity, its education level or its income level.
 
@@ -239,7 +239,7 @@ Consequently, the predisposition of a neighbourhood to have a good **pass** rate
   <iframe src="maps/result_per_year_map.html" frameborder="0" width="80%" height="600px"></iframe>
 </div>
 
-It is quite hard to target repeating features as the map changes a lot throughout the years. If, of course, the neighbourhoods that we previously identified tend to have a higher/lower pass rate per year, in fact the majority of the community areas have good and bad years inspection-wise. For example, **Riverdale** goes from a poor rate in 2014 to a great one in 2015 before falling in 2016 to an even worse rate than in 2014. To explain these observations, we could hypothesize that, depending on the community area and the year, the **Chicago Department of Public Health (CDPH)** focuses their inspections on facilities with more or less previously failed inspections, which would then have a higher or lower probability of passing the new inspection.
+It is quite hard to target repeating features as the map changes a lot throughout the years. Even though the neighbourhoods that we previously identified tend to have a higher/lower pass rate per year, in fact the majority of the community areas have good and bad years inspection-wise. For example, **Riverdale** goes from a poor rate in 2014 to a great one in 2015 before falling in 2016 to an even worse rate than in 2014. To explain these observations, we could hypothesize that, depending on the community area and the year, the **Chicago Department of Public Health (CDPH)** focuses their inspections on facilities with more or less previously failed inspections, which would then have a higher or lower probability of passing the new inspection.
 
 When comparing the years between them, we can notice that at first the food inspections were quite severe. This is revealed by the proportion of yellow/red neighbourhoods from 2010 to 2012. The map becomes much greener for the three subsequent years before getting slightly more red again after 2015. Maybe, there was a bit of change in the CDPH standards that made more establishments fail their food inspections. As for 2018, we could be biased by the fact that we only have data for the first half of the year.
 
