@@ -1,23 +1,37 @@
 
-		.faq {
-			counter-reset: my-badass-counter;
-		}
-		.faq dt {
-			position: relative;
-			font: 40px Sans-Serif;
-			padding: 4px 0 10px 0;
-		}
-		.faq dt:before {
-			content: counter(my-badass-counter);
-			counter-increment: my-badass-counter;
-			position: absolute;
-			left: 0;
-			top: 0;
-			font: bold 50px/1 Sans-Serif;
-		}
-		.faq dd {
-			margin: 0 0 0px 0;
-		}
-		.faq dt {
-			padding-left: 60px;
-		}
+.faq {
+	counter-reset: my-badass-counter;
+}
+.faq dt {
+	position: relative;
+	font: 40px Sans-Serif;
+	padding-top: 40px;
+	padding-bottom: 12px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #E6E6E6;
+}
+.faq dtn {
+	position: relative;
+	font: 40px Sans-Serif;
+	padding-top: 40px;
+	padding-bottom: 12px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #E6E6E6;
+}
+.faq dt:before {
+	content: counter(my-badass-counter);
+	counter-increment: my-badass-counter;
+	position: absolute;
+	left: 0;
+	top: 0;
+	font: 50px Sans-Serif;
+	padding: 36px 0 0 0;
+}
+.faq dd {
+	padding-top: 10px;
+}
+.faq dt {
+	padding-left: 60px;
+}
