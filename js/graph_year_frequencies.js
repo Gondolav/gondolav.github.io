@@ -44,7 +44,7 @@ Highcharts.chart('graph_year_frequencies', {
     series: [{
         showInLegend: false,
         data: [17063, 17994, 17516, 19938, 20886, 20544, 22577, 21320, 9293],
-        //color: '#56E39F'
+        color: '#039590'
     }],
 
     responsive: {

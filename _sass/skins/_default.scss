@@ -5,7 +5,7 @@
 ///
 
 // main colors
-$main-color-1:     #fc4d50;
+$main-color-1:     #00AFB0;
 $text-color-1:     #fff;
 
 $main-color-2:     #fca24d;
@@ -37,10 +37,10 @@ $text-background-color: rgba(#000, .05);
 
 // header and footer colors
 $header-text-color: $text-color-3;
-$header-background: $main-color-3;
+$header-background: linear-gradient(60deg, #4BBC8E 0%, #039590 100%);
 
 $footer-text-color: $text-color-3;
-$footer-background: $main-color-3;
+$footer-background: linear-gradient(60deg, #4BBC8E 0%, #039590 100%);
 
 // border and shadow colors
 $border-color:     mix(#000, $background-color, 20%);

@@ -41,7 +41,7 @@ Highcharts.chart('graph_month_frequencies', {
     series: [{
         showInLegend: false,
         data: [13222, 12397, 15136, 14511, 16119, 15931, 11874, 14381, 15093, 14700, 12582, 11185],
-        //color: '#56E39F'
+        color: '#039590'
     }],
 
     responsive: {

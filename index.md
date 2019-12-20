@@ -13,8 +13,8 @@ article_header:
   theme: dark
   background_color: '#203028'
   background_image:
-    gradient: 'linear-gradient(135deg, rgba(252, 159, 91, .4), rgba(103, 164, 211, .4))'
-    src: /images/chicago-skyline4.jpg
+    gradient: 'linear-gradient(135deg, rgba(3, 149, 144, .3), rgba(75, 188, 142, .3))'
+    src: /chicago.jpg
 ---
 <!--more-->
 
