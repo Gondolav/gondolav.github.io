@@ -29,21 +29,17 @@ en:
     children:
         - title:  The setting
           url:    /#the-setting
-        - title:  Inspections and food establishments
-          url:    /#inspections-and-food-establishments
-        - title:  The analysis
-          url:    /#the-analysis
         - title:  Facility types and inspection results
-          url:    /#i-facility-types-and-inspection-results
+          url:    /#facility-types-and-inspection-results
         - title:  Some interesting facts about fast-food restaurant chains
-          url:    /#ii-some-interesting-facts-about-fast-food-restaurant-chains
+          url:    /#some-interesting-facts-about-fast-food-restaurant-chains
         - title:  "Breaking the rules: a violations' analysis"
-          url:    /#iii-breaking-the-rules-a-violations-analysis
+          url:    /#breaking-the-rules-a-violations-analysis
         - title:  "Neighbourhoods: a risk-oriented landscape"
-          url:    /#iv-neighbourhoods-a-risk-oriented-landscape
+          url:    /#neighbourhoods-a-risk-oriented-landscape
         - title:  Profiling the neighbourhoods through their results
-          url:    /#v-profiling-the-neighbourhoods-through-their-results
+          url:    /#profiling-the-neighbourhoods-through-their-results
         - title:  An overview of the inspections' effects on establishments
-          url:    /#vi-an-overview-of-the-inspections-effects-on-establishments
+          url:    /#an-overview-of-the-inspections-effects-on-establishments
         - title:  What have we learned?
           url:    /#what-have-we-learned
