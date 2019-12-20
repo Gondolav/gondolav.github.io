@@ -1,6 +1,7 @@
 Highcharts.chart('graph_facility_types', {
     chart: {
-        type: 'column'
+        type: 'column',
+        backgroundColor: 'rgba(0,0,0,0)'
     },
     title: {
         text: 'Mean fail rate per facility type'
@@ -72,5 +73,9 @@ Highcharts.chart('graph_facility_types', {
                 fontFamily: 'Verdana, sans-serif'
             }
         }
-    }]
+    }],
+
+    credits: {
+        enabled: false
+    }
 });

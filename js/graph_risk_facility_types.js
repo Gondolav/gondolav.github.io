@@ -1,6 +1,7 @@
 Highcharts.chart('graph_risk_facility_types', {
     chart: {
-        type: 'column'
+        type: 'column',
+        backgroundColor: 'rgba(0,0,0,0)'
     },
     title: {
         text: 'Risk distribution per facility type'
@@ -35,5 +36,9 @@ Highcharts.chart('graph_risk_facility_types', {
         name: 'LOW',
         data: [0, 0, 0, 3, 2, 8, 0, 5, 8, 34, 0, 2, 473, 1, 28, 7, 10, 140, 3382, 0, 42, 397, 357, 23, 31, 19, 18, 115],
         color: '#DBE4EE'
-    }]
+    }],
+
+    credits: {
+        enabled: false
+    }
 });
