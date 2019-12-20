@@ -251,7 +251,7 @@ As a starting point, more hospitals and schools could be opened in the most depr
 
 # VI. Inspection effects on establishments
 
-The very first idea that came to our head is to check if inspections were useful, i.e. if they truly had an impact on the quality and safety of the food facilities. That is the main question we intend to answer in this part.
+In the end, are inspections useful? Do they truly have an impact on the quality and safety of the food facilities? These are the main questions we intend to answer in this part.
 
 First, let us draw a graph of the inspections and their results over the years to see if there is any evolution:
 
@@ -292,8 +292,16 @@ First of all, the number of inspections has significantly increased from 2010 to
 
 # What have we learned?
 
-While analyzing the inspections' results, we discovered that **severe inequalities**, linked to the population's wealth, ethnicity and education, exist even in the context of food safety; the safest restaurants are, indeed, gathered mostly in prosperous neighbourhoods. As such, one possible way of reducing social inequalities in Chicago would surely be improving the quality of food establishments.
+If you want to minimize risks and eat safely, the Loop, the North-Western and South-Western neighbourhoods of the city are your best bet. Admittedly, this shouldn't be big news, as these areas corresponds to the wealthiest ones in Chicago. Furthermore, the analyses we completed allowed us to discover severe inequalities linked to the population’s wealth, ethnicity and education: the poorest neighbourhoods are indeed less inspected, and tend to fail inspections more often.
 
-NOT DONE YET, WAITING FOR THE DATA STORY TO BE COMPLETE
+Nevertheless, inspections are very useful, as passing rates increase once they are carried out. Therefore, filing official complaints is definitely a viable solution available to the customers to improve the safety of the establishments they visit.
 
-- summary of each section? (including brief summary of the safest neighbourhoods?)
+Taking a closer look at the violations, we discovered that the most common ones are related to keep cooking and serving spaces clean, and that, unfortunately, rodents and insects represent an issue for several establishments.
+
+Considering the different types of facilities, we found out that liquor stores, taverns and bars have the highest failure rates. Moreover, sensitive establishments related to children and the elderly, as well as hospitals, are considered the riskiest, and thus more inspected, which should guarantee higher food safety standards.
+
+Finally, we delved into inspections to fast-food restaurant chains, discovering that sandwich and coffeehouse facilities are better overall. More specifically, a customer should prefer Starbucks, Taco Bell and KFC, and avoid Papa John's Pizza, Harold's Chicken Shack and Flat Top Grill.
+
+
+
+
