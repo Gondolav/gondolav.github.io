@@ -33,17 +33,17 @@ en:
           url:    /#inspections-and-food-establishments
         - title:  The analysis
           url:    /#the-analysis
-        - title:  Facility types analysis
-          url:    /#facility-types-analysis
-        - title:  Fast-food restaurant chains
-          url:    /#fast-food-restaurant-chains
-        - title:  Violation analysis
-          url:    /#violation-analysis
-        - title:  Risk analysis per neighbourhood
-          url:    /#risk-analysis-per-neighbourhood
-        - title:  Result analysis per neighbourhood
-          url:    /#result-analysis-per-neighbourhood
-        - title:  Inspection effects on establishments
-          url:    /#inspection-effects-on-establishments
+        - title:  Facility types and inspection results
+          url:    /#i-facility-types-and-inspection-results
+        - title:  Some interesting facts about fast-food restaurant chains
+          url:    /#ii-some-interesting-facts-about-fast-food-restaurant-chains
+        - title:  "Breaking the rules: a violations' analysis"
+          url:    /#iii-breaking-the-rules-a-violations-analysis
+        - title:  "Neighbourhoods: a risk-oriented landscape"
+          url:    /#iv-neighbourhoods-a-risk-oriented-landscape
+        - title:  Profiling the neighbourhoods through their results
+          url:    /#v-profiling-the-neighbourhoods-through-their-results
+        - title:  An overview of the inspections' effects on establishments
+          url:    /#vi-an-overview-of-the-inspections-effects-on-establishments
         - title:  What have we learned?
           url:    /#what-have-we-learned
