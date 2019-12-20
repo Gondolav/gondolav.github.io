@@ -50,12 +50,11 @@ The inspections' results are available [online](http://webapps1.chicago.gov/heal
 
 We analysed food inspections' results to give an overview of the city's food safety over the last decade. The aim was to identify patterns at the social and geographical levels, focusing our efforts in pinpointing **where to eat safely in Chicago**. With our work, we hope to raise awareness about the Chicago's food safety landscape and instruct people on the quality of the establishments they regularly visit.
 
-In this article, we first take a look at the different facilities' predispositions to inspection failure. Then, we compare famous fast-food restaurant chains, highlighting very interesting findings, and we also present some curious facts about Food Code violations. Next, we address our main objective: showing which neighbourhoods are the safest food-wise and explore the evolution of the neighbourhoods' safety throughout time. Finally, at the end of the article, we assess the usefulness and the potential effects of the inspections.
+In this article, we first take a look at the different facilities' predispositions to inspection failure. Then, we compare famous fast-food restaurant chains, highlighting very interesting findings, and we also present some curious facts about Food Code violations. Next, we address our main objective: showing which neighbourhoods are the safest food-wise and exploring the evolution of the neighbourhoods' safety throughout time. Finally, at the end of the article, we assess the usefulness and the potential effects of the inspections.
 
 We use the [Chicago Metropolitan Agency for Planning website](https://www.cmap.illinois.gov/data/community-snapshots) to interpret in a deeper way our results, as they provide community snapshots that summarize demographics, housing, employment, transportation habits, retail sales, property values, and land use in all 77 Chicago community areas, which correspond to the "neighbourhoods" we are considering.
-<!-- We have built small tables with the different features we found interesting on the best and worse Community Areas according to the two main aspects we considered, namely the **RISK 1 (HIGH)** rate and the **PASS** rate. -->
 
-# I. Facility types analysis
+# I. Facility types and inspection results
 
 Food inspection concerns a very large variety of catering-related services. Let's see if and how the facility types and inspection results are tied to one another. As one would expect, the distribution of these facilities is extremely uneven: restaurants are by far the most represented type in Chicago counting 18,073 distinct establishments, which corresponds to 60% of the city's facilities. It is followed by grocery stores with 5,792 instances (20%) and by schools with a total of 1,125 facilities (4%). Let's now take a look at the **average fail rate per facility type**:
 
@@ -82,7 +81,7 @@ Overall it is difficult to extract any really meaningful generalization but it s
 
 The food safety seems indeed correlated to the risk assessed by the inspectors. We can see that the most sensitive facilities are the one taking care of children, elders or hospital patients, and that they indeed have a low fail rate as concluded earlier. Furthermore, the establishments with the highest fail rate are mainly marked as not risky, which fits the previous observations.
 
-# II. Fast-food restaurant chains
+# II. Some interesting facts about fast-food restaurant chains
 
 Fast-foods restaurants are undeniably forming a huge sector of modern catering and are well-known to the average consumer. Conducting a study about the popular chains located in Chicago is a good way to reveal insights about food quality in these establishments and find out how they compare to one another. We selected the chains that had the largest number of open restaurants in the city in order to have stable and accurate data. Let's take a look at their inspection result distribution:
 
@@ -99,11 +98,11 @@ We may have to be careful with those results: the huge gap (302 **Subway**'s ver
 
 Overall, we observe a mean fail rate of 18.4% for fast-food chains in Chicago city, whereas classical restaurants average to 21.4%. This significant difference indicates that, surprisingly, fast-food facilities tend to have a cleaner cooking and serving environment. It can be explained by the fact that these restaurants are part of big corporate groups and have therefore strict and well-defined hygiene rules.
 
-# III. Violation analysis TODO CHANGE
+# III. Breaking the rules: a violations' analysis
 
-We were provided with the comments related to each inspection. Although it would have been very difficult to perform an analysis over the comments themselves, these comments are fortunately classified into forty-six violation categories, which could be interpreted as the set of rules to follow to obtain a facility as safe as possible. Consequently, these rules appear in the comments when they are violated. That is what we will be focusing on in this section.
+Inspections' comments are classified into forty-six violation categories, which could be interpreted as the set of rules to follow to make a facility safe. Consequently, these rules appear in the comments when they are violated. That is what we will be focusing on in this section.
 
-## Violation frequency TODO CHANGE
+## The violations' leaderboard
 
 To start simple, we extracted the most frequent violations to see if any scheme appeared. The most encountered ones are the following:
 1. **34. Floors: constructed per code, cleaned, good repair, coving installed, dust-less cleaning methods used**
@@ -145,7 +144,7 @@ Overall, the frequency difference is not really meaningful (at most 1.3%) so the
 To conclude with this analysis, we extract the most encountered violation category in each neighbourhood. [Violation number 34](/#violation-frequency) clearly wins here as it is the most met category in 54 out of 77 community areas.
 A violation analysis over the neighbourhoods is then not very insightful to get to know more about which parts of the city are the safest food-wise. This is the question we will address in the next parts.
 
-# IV. Risk analysis per neighbourhood
+# IV. Neighbourhoods: a risk-oriented landscape
 
 One of the features we could use to perform an analysis of the food inspections is the **risk** associated with each inspection. By risk, here we mean the possibility of *adversely affecting the public's health*. It can take 3 different values: **high**, **medium** and **low**. Indeed, the establishments which are judged more risky will be more inspected than others, and we found out earlier that it was closely related to the facility type. We chose to judge the neighbourhoods by their percentage of high risk food facilities as it appeared to be an accurate measure we could get from this feature. Indeed, such a test would probably tell us something about the safest places in Chicago food-wise.
 We built the following map, which colours each community area according to its **high** risk rate.
@@ -190,7 +189,7 @@ To conclude, we can say that this *a priori* feature which is the risk doesn't r
 
 We also noticed earlier that a lower risk meant an higher fail rate. We will verify and deepen this assumption with the following analysis, and draw the appropriate conclusions.
 
-# V. Result analysis per neighbourhood
+# V. Profiling the neighbourhoods through their results
 
 Another very interesting feature present in the inspections is obviously the **result** of the inspection. We decided to focus on the three main possible results: **pass**, **pass with conditions** and **fail**. Gathering the two first possibilities into a global pass, this provided us with a pass and a fail rates summing up to 1. We can now portray the community areas by their percentage of successful inspections and get the following map:
 
@@ -198,7 +197,7 @@ Another very interesting feature present in the inspections is obviously the **r
   <iframe src="maps/result_map.html" frameborder="0" width="80%" height="600px"></iframe>
 </div>
 
-The central district **Loop** as well as the edge areas of the city share the highest rates when regarding the passed inspections. They are wealthy neighbourhoods, which could explain why a peculiar care seems to be taken in making food facilities safe. We clearly cannot say the same about the South Side of Chicago, which gathers the Community Areas with the highest **FAIL** rates.
+The central district **Loop** as well as the edge areas of the city share the highest rates when regarding the passed inspections. They are wealthy neighbourhoods, which could explain why a peculiar care seems to be taken in making food facilities safe. We clearly cannot say the same about the South Side of Chicago, which gathers the Community Areas with the highest **fail** rates.
 
 As for the risk analysis, we deepen our interpretation thanks to the [Chicago Metropolitan Agency for Planning website](https://www.cmap.illinois.gov/data/community-snapshots).
 
@@ -233,7 +232,7 @@ The conclusion to draw here is rather clear: a low pass rate seems to be closely
 
 Consequently, the predisposition of a neighbourhood to have a good **pass** rate appears to be somehow linked to its prosperity. It would then be safer to look for a restaurant or a groceries store in the wealthy community areas of Chicago, namely the Central, Far North, Southwest and Far Southwest Sides of Chicago. On one hand, we could see this as logical since facilities in richer areas may have more funds to make their place conform to all the safety norms. On the other hand, however, we could also consider it as some kind of injustice since the poorer are once again disadvantaged with more precarious establishments.
 
-## Evolution of the pass rate over time
+## The evolution of the passing rate over time
 
 <div style="text-align:center;">
   <iframe src="maps/result_per_year_map.html" frameborder="0" width="80%" height="600px"></iframe>
@@ -249,7 +248,7 @@ As a general conclusion for this analysis, we can affirm that facilities which f
 
 As a starting point, more hospitals and schools could be opened in the most deprived neighbourhoods to give a better access to education and healthcare to the underprivileged, who would need both of them to find proper jobs and have enough money for living.
 
-# VI. Inspection effects on establishments
+# VI. An overview of the inspections' effects on establishments
 
 In the end, are inspections useful? Do they truly have an impact on the quality and safety of the food facilities? These are the main questions we intend to answer in this part.
 
@@ -268,7 +267,7 @@ Then, we noticed that an important part of the inspections are in fact a **consu
 
 To conclude, it is quite obvious that inspections do have a positive effect on the facilities. After all, it makes sense since these inquiries point out the defects in an establishment's safety, thus allowing the owners to improve it and make sure there is no food risk for the clients coming to their place.
 
-## Bonus: inspections' evolution throughout time
+## Bonus: the inspections' evolution throughout time
 
 <center>
     <figure class="highcharts-figure">
