@@ -292,16 +292,12 @@ First of all, the number of inspections has significantly increased from 2010 to
 
 # What have we learned?
 
-If you want to minimize risks and eat safely, the Loop, the North-Western and South-Western neighbourhoods of the city are your best bet. Admittedly, this shouldn't be big news, as these areas corresponds to the wealthiest ones in Chicago. Furthermore, the analyses we completed allowed us to discover severe inequalities linked to the population’s wealth, ethnicity and education: the poorest neighbourhoods are indeed less inspected, and tend to fail inspections more often.
+If you want to minimize risks and eat safely, the Loop, the northwestern and southwestern neighbourhoods of the city are your best bet. Admittedly, this shouldn't be big news, as these areas corresponds to the wealthiest ones in Chicago. Furthermore, the analyses we completed allowed us to discover severe inequalities linked to the population’s wealth, ethnicity and education: the poorest neighbourhoods are indeed less inspected, and tend to fail inspections more often.
 
 Nevertheless, inspections are very useful, as passing rates increase once they are carried out. Therefore, filing official complaints is definitely a viable solution available to the customers to improve the safety of the establishments they visit.
 
 Taking a closer look at the violations, we discovered that the most common ones are related to keep cooking and serving spaces clean, and that, unfortunately, rodents and insects represent an issue for several establishments.
 
-Considering the different types of facilities, we found out that liquor stores, taverns and bars have the highest failure rates. Moreover, sensitive establishments related to children and the elderly, as well as hospitals, are considered the riskiest, and thus more inspected, which should guarantee higher food safety standards.
+Considering the different types of facilities, we found out that liquor stores, taverns and bars have the highest failure rates. Moreover, sensitive establishments related to children and the elderly, as well as hospitals, are considered the riskiest, and are therefore more inspected, which should guarantee higher food safety standards.
 
 Finally, we delved into inspections to fast-food restaurant chains, discovering that sandwich and coffeehouse facilities are better overall. More specifically, a customer should prefer Starbucks, Taco Bell and KFC, and avoid Papa John's Pizza, Harold's Chicken Shack and Flat Top Grill.
-
-
-
-

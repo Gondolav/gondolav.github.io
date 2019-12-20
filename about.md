@@ -30,10 +30,7 @@ This data story is the main contribution of our [EPFL Applied Data Analysis (ADA
 The dataset used is available on [Kaggle](https://www.kaggle.com/chicago/chicago-food-inspections).
 
 Our team:
-- Andrea Veneziano
-- Ludo Hoffstetter
 - Thomas De Boissonneaux De Chevigny
 - Hugo El Guedj
-
-
-
+- Ludo Hoffstetter
+- Andrea Veneziano
