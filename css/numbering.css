@@ -1,0 +1,23 @@
+
+		.faq {
+			counter-reset: my-badass-counter;
+		}
+		.faq dt {
+			position: relative;
+			font: 40px Sans-Serif;
+			padding: 4px 0 10px 0;
+		}
+		.faq dt:before {
+			content: counter(my-badass-counter);
+			counter-increment: my-badass-counter;
+			position: absolute;
+			left: 0;
+			top: 0;
+			font: bold 50px/1 Sans-Serif;
+		}
+		.faq dd {
+			margin: 0 0 0px 0;
+		}
+		.faq dt {
+			padding-left: 60px;
+		}
