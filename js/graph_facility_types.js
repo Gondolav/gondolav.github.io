@@ -60,7 +60,7 @@ Highcharts.chart('graph_facility_types', {
           ['CATERING', 16.50099403578529],
           ['HOSPITAL', 14.476614699331849]
         ],
-        color: '#FF714A',
+        color: '#039590',
         dataLabels: {
             enabled: true,
             rotation: -90,
