@@ -22,6 +22,10 @@ Highcharts.chart('graph_year_frequencies', {
         }
     },
 
+    tooltip: {
+        pointFormat: '<b>{point.y}</b><br/>'
+    },
+
     legend: {
         layout: 'vertical',
         align: 'right',

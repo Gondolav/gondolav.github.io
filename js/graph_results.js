@@ -20,6 +20,10 @@ Highcharts.chart('graph_results', {
         }
     },
 
+    tooltip: {
+        pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y:.0f}%</b><br/>'
+    },
+
     legend: {
         layout: 'vertical',
         align: 'right',

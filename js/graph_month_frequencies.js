@@ -20,6 +20,10 @@ Highcharts.chart('graph_month_frequencies', {
         categories: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
     },
 
+    tooltip: {
+        pointFormat: '<b>{point.y}</b><br/>'
+    },
+
     legend: {
         layout: 'vertical',
         align: 'right',
